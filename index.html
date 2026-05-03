@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shaoqi Qi</title>
+<meta name="description" content="Shaoqi Qi — researcher in 3D computer vision, dynamic scene reconstruction, and Gaussian Splatting." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<nav class="topnav">
+  <div class="nav-inner">
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#cv">CV</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <header class="hero">
+    <img class="avatar" src="assets/avatar.jpg" alt="Shaoqi Qi" onerror="this.style.background='#e5e5e5';this.removeAttribute('src');">
+    <div class="hero-text">
+      <h1>Shaoqi Qi <span class="zh">戚少奇</span></h1>
+      <p class="title">PhD Researcher · University of Liverpool</p>
+      <p class="affil">Department of Computer Science</p>
+      <ul class="socials">
+        <li><a href="mailto:shaoqi@liverpool.ac.uk" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
+        <li><a href="https://github.com/qishao11" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="#" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a></li>
+        <li><a href="#" title="ORCID"><i class="fa-brands fa-orcid"></i></a></li>
+        <li><a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="#" title="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am a PhD researcher at the University of Liverpool working on
+      <strong>3D computer vision</strong>. My current focus is
+      <em>dynamic 3D scene reconstruction</em> — combining recurrent pointmap
+      transformers with <strong>3D Gaussian Splatting</strong> in a
+      frozen-backbone, plug-in fashion.
+    </p>
+    <p>
+      Recent work spans monocular SLAM, multi-agent collaborative mapping, and
+      pose estimation under casual capture. I care about reproducible, modular
+      systems that survive contact with real video.
+    </p>
+    <p class="aside">Outside research: long-distance running, film photography, and (occasionally) cooking experiments that should not be rerun.</p>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news-list">
+      <li><span class="date">2026-05</span> Personal homepage online.</li>
+      <!-- Add entries: <li><span class="date">YYYY-MM</span> ...</li> -->
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <p class="muted">
+      <a href="#">Full list on Google Scholar →</a>
+    </p>
+
+    <!-- Replace the example below with real entries -->
+    <article class="pub">
+      <div class="pub-thumb"></div>
+      <div class="pub-body">
+        <h3 class="pub-title">Paper Title Goes Here</h3>
+        <p class="pub-authors"><strong>Shaoqi Qi</strong>, Co-Author A, Co-Author B</p>
+        <p class="pub-venue"><em>Venue</em>, Year</p>
+        <p class="pub-links">
+          <a href="#">paper</a> ·
+          <a href="#">code</a> ·
+          <a href="#">project page</a> ·
+          <a href="#">bibtex</a>
+        </p>
+      </div>
+    </article>
+
+    <!-- duplicate <article class="pub">...</article> for more entries -->
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <a class="project-card" href="#">
+        <h3>MAGS-SLAM</h3>
+        <p>RGB-only multi-agent Gaussian SLAM with dual-protocol trajectory evaluation.</p>
+      </a>
+      <a class="project-card" href="#">
+        <h3>Project Two</h3>
+        <p>Short one-line description.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>
+      <a href="assets/cv.pdf">Download CV (PDF)</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    © <span id="year"></span> Shaoqi Qi ·
+    <a href="https://github.com/qishao11/qishao11.github.io">site source</a>
+  </p>
+</footer>
+
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
