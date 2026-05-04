@@ -7,128 +7,85 @@
 <meta name="description" content="Shaoqi Qi — researcher in 3D computer vision, multi-agent Gaussian Splatting SLAM, and collaborative photorealistic scene reconstruction." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<nav class="topnav">
-  <div class="nav-inner">
-    <a href="#about">About</a>
-    <a href="#news">News</a>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-  </div>
-</nav>
 
 <main class="container">
 
   <header class="hero">
-    <img class="avatar" src="assets/avatar.jpg" alt="Shaoqi Qi" onerror="this.style.background='#e5e5e5';this.removeAttribute('src');">
-    <div class="hero-text">
-      <h1>Shaoqi Qi <span class="zh">戚少奇</span></h1>
-      <p class="title">PhD Researcher · University of Liverpool</p>
-      <p class="affil">Department of Computer Science</p>
-      <ul class="socials">
-        <li><a href="mailto:shaoqi@liverpool.ac.uk" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
-        <li><a href="https://github.com/qishao11" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="#" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a></li>
-        <li><a href="#" title="ORCID"><i class="fa-brands fa-orcid"></i></a></li>
-        <li><a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="#" title="X"><i class="fa-brands fa-x-twitter"></i></a></li>
-      </ul>
-    </div>
+    <img class="avatar" src="assets/avatar.jpg" alt="Shaoqi Qi" onerror="this.style.background='#dcdcdc';this.removeAttribute('src');">
+    <h1>Shaoqi Qi <span class="zh">戚少奇</span></h1>
+    <p class="bio">
+      I am a PhD researcher in the Department of Computer Science at the
+      <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
+      My research focuses on <b>monocular multi-agent 3D Gaussian Splatting
+      SLAM</b> — enabling multiple cameras to collaboratively reconstruct a
+      single, geometrically and photometrically consistent scene from RGB
+      video alone, without depth sensors. I am especially interested in
+      compact submap communication, geometry- and appearance-aware loop
+      verification, and occupancy-aware Gaussian fusion under monocular scale
+      ambiguity.
+    </p>
+    <p class="contact">
+      [<a href="mailto:shaoqi@liverpool.ac.uk">Email</a>]
+      / [<a href="#">Google Scholar</a>]
+      / [<a href="#">LinkedIn</a>]
+      / [<a href="https://github.com/qishao11">Github</a>]
+      / [<a href="assets/cv.pdf">CV</a>]
+    </p>
   </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      I am a PhD researcher at the University of Liverpool working on
-      <strong>3D computer vision</strong>. My research focuses on
-      <strong>monocular multi-agent 3D Gaussian Splatting SLAM</strong> —
-      enabling multiple cameras to collaboratively reconstruct a single,
-      geometrically and photometrically consistent scene from RGB video alone,
-      without depth sensors.
-    </p>
-    <p>
-      I am especially interested in: (i) compact submap communication that
-      lets agents share scene knowledge without exchanging raw observations
-      or dense maps; (ii) geometry- and appearance-aware loop verification
-      for robust inter-agent association; and (iii) occupancy-aware Gaussian
-      fusion that resolves monocular scale ambiguity in collaborative
-      settings. I care about reproducible, modular systems that survive
-      contact with real video.
-    </p>
-    <p class="aside">Outside research: long-distance running, film photography, and (occasionally) cooking experiments that should not be rerun.</p>
-  </section>
-
-  <section id="news">
-    <h2>News</h2>
+  <section>
+    <h2>Event and News</h2>
     <ul class="news-list">
-      <li><span class="date">2026-05</span> Project page for <a href="https://mags-slam.github.io/">MAGS-SLAM</a> is online.</li>
-      <li><span class="date">2026-05</span> Personal homepage online.</li>
+      <li>May 2026: Project page for <b>MAGS-SLAM</b> is online — see <a href="https://mags-slam.github.io/">mags-slam.github.io</a>.</li>
+      <li>May 2026: Personal homepage online.</li>
     </ul>
   </section>
 
-  <section id="publications">
+  <section>
     <h2>Selected Publications</h2>
-    <p class="muted">
-      <a href="#">Full list on Google Scholar →</a>
-    </p>
 
-    <article class="pub">
-      <div class="pub-thumb"></div>
-      <div class="pub-body">
-        <h3 class="pub-title">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</h3>
-        <p class="pub-authors"><strong>Shaoqi Qi</strong> et al.</p>
-        <p class="pub-venue"><em>Under review</em>, 2026</p>
-        <p class="pub-summary">
-          The first RGB-only multi-agent 3D Gaussian Splatting SLAM for
-          collaborative photorealistic scene reconstruction. Compact submap
-          communication, geometry- and appearance-aware loop verification,
-          and occupancy-aware Gaussian fusion address monocular scale
-          ambiguity in collaborative settings. We also introduce
-          <em>ReplicaMultiAgent Plus</em>, a benchmark for collaborative
-          Gaussian SLAM.
-        </p>
-        <p class="pub-links">
-          <a href="https://mags-slam.github.io/">project page</a>
-        </p>
-      </div>
-    </article>
+    <table class="pub-table">
+      <tr>
+        <td class="pub-thumb-cell">
+          <div class="pub-thumb"></div>
+        </td>
+        <td class="pub-body-cell">
+          <p class="pub-title">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</p>
+          <p class="pub-authors"><b>Shaoqi Qi</b> et al.</p>
+          <p class="pub-venue"><i>Under review</i>, 2026</p>
+          <p class="pub-links">
+            [<a href="https://mags-slam.github.io/">project page</a>]
+          </p>
+          <p class="pub-desc">
+            The first RGB-only multi-agent 3D Gaussian Splatting SLAM for
+            collaborative photorealistic scene reconstruction. We introduce
+            compact submap communication, geometry- and appearance-aware loop
+            verification, and occupancy-aware Gaussian fusion, together with
+            <i>ReplicaMultiAgent Plus</i> — a benchmark for collaborative
+            Gaussian SLAM.
+          </p>
+        </td>
+      </tr>
+    </table>
+
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <a class="project-card" href="https://mags-slam.github.io/">
-        <h3>MAGS-SLAM</h3>
-        <p>Monocular multi-agent 3D Gaussian Splatting SLAM. RGB-only collaborative reconstruction with compact submap communication and occupancy-aware Gaussian fusion.</p>
-      </a>
-      <a class="project-card" href="https://mags-slam.github.io/">
-        <h3>ReplicaMultiAgent Plus</h3>
-        <p>Benchmark for evaluating collaborative Gaussian SLAM under monocular, multi-agent settings.</p>
-      </a>
-    </div>
-  </section>
-
-  <section id="cv">
-    <h2>CV</h2>
-    <p>
-      <a href="assets/cv.pdf">Download CV (PDF)</a>
+  <section>
+    <h2>Service</h2>
+    <p class="service">
+      Conference reviewer for CVPR, ICCV, ECCV, NeurIPS (when invited).
     </p>
   </section>
 
 </main>
 
 <footer>
-  <p>
-    © <span id="year"></span> Shaoqi Qi ·
-    <a href="https://github.com/qishao11/qishao11.github.io">site source</a>
-  </p>
+  <p>Thank Dr. Jon Barron for sharing the source code of the website.</p>
 </footer>
 
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
