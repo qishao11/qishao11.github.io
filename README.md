@@ -4,9 +4,9 @@ GitHub Pages auto-publishes `main` to https://qishao11.github.io after every pus
 
 ## Customize
 
-- `index.html` — content (bio, news, Featured Research, Academic Service)
-- `stylesheet.css` — navbar + layout (loaded first)
-- `styles.css` — reserved for overrides
+- `index.html` — edit page content here: profile, links, News, Education, Research Experience, Publications, Honors, Academic Service
+- `stylesheet.css` — edit visual style here: layout, spacing, colors, mobile behavior
+- `styles.css` — optional small overrides, loaded after `stylesheet.css`
 - `images/profile.jpg` — your photo (square or 1:1.2 portrait recommended; falls back to grey block if missing)
 - `images/mags_slam.jpg` — paper teaser (16:9 recommended)
 - `cv.pdf` — drop your CV here

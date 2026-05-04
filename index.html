@@ -1,321 +1,330 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Shaoqi QI</title>
+  <meta charset="UTF-8">
   <meta name="author" content="Shaoqi QI">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { primary: '#3b82f6', accent: '#ef4444' },
-          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-        }
-      }
-    }
-  </script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-
-    body a:not(.nav-links a):not(.logo a) {
-      color: #3b82f6;
-      text-decoration: none;
-    }
-    body a:not(.nav-links a):not(.logo a):hover {
-      color: #2563eb;
-      text-decoration: underline;
-    }
-
-    html, body { height: 100%; overflow-x: hidden; }
-    html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; }
-    html, body { scrollbar-width: none; }
-    html { -ms-overflow-style: none; }
-
-    .section-title {
-      text-align: left;
-      color: #333;
-      font-size: 1.5rem;
-    }
-
-    .news-section { max-width: 1080px; }
-
-    .news-scroll-container {
-      padding: 0.8rem 0 0.2rem 1rem;
-      border: none;
-      border-left: 2px solid #e5e7eb;
-      border-radius: 0;
-      scrollbar-width: thin;
-    }
-    .news-scroll-container::-webkit-scrollbar { width: 5px; }
-    .news-scroll-container::-webkit-scrollbar-thumb { background-color: #9ca3af; border-radius: 3px; }
-    .news-scroll-container::-webkit-scrollbar-track { background-color: #f3f4f6; }
-
-    .zoom-modal {
-      display: none; position: fixed; z-index: 1000; padding-top: 50px;
-      left: 0; top: 0; width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.9);
-    }
-    .modal-content { margin: auto; display: block; max-width: 90%; max-height: 80%; }
-    .close-modal {
-      position: absolute; top: 20px; right: 35px;
-      color: white; font-size: 40px; font-weight: bold; cursor: pointer;
-    }
-
-    .name { margin-bottom: 0.8rem; font-size: 1.8rem; }
-    .news-scroll-container a { text-decoration: underline; }
-    .bio-text { font-size: 0.9rem; line-height: 1.8; margin-bottom: 5px; }
-    .contact-links { font-size: 1.0rem; }
-
-    .pub-row td:first-child { width: 35%; padding: 12px; vertical-align: middle; }
-    .pub-row td:last-child  { width: 65%; padding: 12px; vertical-align: middle; }
-    .pub-row p { margin-top: 10px; }
-
-    .featured-thumb {
-      width: 100%; height: auto; display: block;
-      aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px;
-    }
-
-    .papertitle { font-weight: 700; }
-    .award-note { color: red; font-weight: 700; font-style: italic; }
-
-    @media (max-width: 768px) {
-      .pub-row { display: block; }
-      .pub-row td { display: block; width: 100% !important; }
-      .pub-row td:first-child { margin-bottom: 12px; }
-    }
-  </style>
-
+  <title>Shaoqi QI</title>
+  <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">
-        <a href="index.html">Shaoqi QI</a>
-      </div>
-      <ul class="nav-links">
+      <a class="logo" href="index.html">Shaoqi QI</a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="site-menu" class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Research</a></li>
         <li><a href="#research">Publications</a></li>
         <li><a href="https://github.com/qishao11">Github</a></li>
       </ul>
-      <div class="menu-toggle"><i class="fa fa-bars"></i></div>
     </div>
   </nav>
 
-  <div class="main-content">
-    <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:auto;">
-      <tbody>
-        <tr>
-          <td style="padding:0">
-            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:auto;">
-              <tbody>
-                <tr>
-                  <td style="padding:2.5%;width:37%;max-width:37%">
-                    <a href="images/profile.jpg">
-                      <img style="width:100%;max-width:100%;object-fit:cover;border-radius:4px;background:#dcdcdc;aspect-ratio:1/1.2;"
-                           alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"
-                           onerror="this.style.background='#dcdcdc';this.removeAttribute('src');">
-                    </a>
-                  </td>
-                  <td style="padding:2.5%;width:63%;vertical-align:middle">
-                    <p class="name" style="text-align:center;">
-                      Shaoqi QI | 戚少奇
-                    </p>
-                    <p class="bio-text">
-                      I am a Ph.D. researcher in the Department of Computer Science at the
-                      <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
-                      My research interests center on <strong>3D computer vision</strong>,
-                      with a focus on <strong>monocular multi-agent 3D Gaussian Splatting SLAM</strong>
-                      — enabling multiple cameras to collaboratively reconstruct a single,
-                      geometrically and photometrically consistent scene from RGB video alone,
-                      without depth sensors.
-                    </p>
-                    <p class="bio-text">
-                      I am especially interested in <strong>compact submap communication</strong>
-                      between agents, <strong>geometry- and appearance-aware loop verification</strong>,
-                      and <strong>occupancy-aware Gaussian fusion</strong> under monocular scale
-                      ambiguity. My recent work has been released on the project page of
-                      <a href="https://mags-slam.github.io/">MAGS-SLAM</a>📈.
-                    </p>
-                    <p class="bio-text">
-                      Beyond research, I care about reproducible, modular systems that survive
-                      contact with real video. I am always open to collaborations on collaborative
-                      mapping, dense SLAM, and Gaussian Splatting in the wild.
-                    </p>
+  <main class="page">
+    <!-- EDIT CONTENT: Profile -->
+    <section class="hero">
+      <div class="profile-photo">
+        <a class="zoom-link image-shell" href="images/profile.jpg" data-zoom-src="images/profile.jpg">
+          <img src="images/profile.jpg" alt="Shaoqi QI profile photo" onerror="this.style.display='none';">
+        </a>
+      </div>
 
-                    <p class="contact-links" style="text-align:left;margin-top:1rem;">
-                      <a href="mailto:shaoqi@liverpool.ac.uk">Email</a> &nbsp;/&nbsp;
-                      <a href="https://github.com/qishao11">Github</a> &nbsp;/&nbsp;
-                      <a href="#">Scholar</a> &nbsp;/&nbsp;
-                      <a href="#">LinkedIn</a> &nbsp;/&nbsp;
-                      <a href="cv.pdf">CV</a>
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+      <div class="profile-copy">
+        <h1 class="name">Shaoqi QI <span>| 戚少奇</span></h1>
 
-            <!-- ########## News ########## -->
-            <section class="news-section">
-              <h2 id="news" class="section-title">News</h2>
-              <div class="news-scroll-container scrollbar-thin scrollbar-thumb-gray">
-                <ul class="space-y-3 text-gray-800">
-                  <li class="timeline-item">
-                    <span class="text-gray-600">[05/2026]</span>
-                    <span class="text-orange-500">🚀</span>
-                    Project page for our recent work
-                    <a href="https://mags-slam.github.io/"><strong>MAGS-SLAM</strong></a>
-                    is online — the first RGB-only multi-agent 3D Gaussian Splatting SLAM.
-                  </li>
-                  <li class="timeline-item">
-                    <span class="text-gray-600">[05/2026]</span>
-                    <span class="text-purple-500">🎉</span>
-                    Personal homepage online.
-                  </li>
-                  <li class="timeline-item">
-                    <span class="text-gray-600">[XX/20XX]</span>
-                    <span class="text-emerald-500">🔓</span>
-                    Placeholder — replace with real news entries as they happen.
-                  </li>
-                </ul>
-              </div>
-              <div id="image-zoom-modal" class="zoom-modal">
-                <span class="close-modal">&times;</span>
-                <img class="modal-content" id="zoomed-image">
-              </div>
-            </section>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+        <p>
+          I am a Ph.D. student in Control Science and Engineering at
+          <a href="https://english.hrbeu.edu.cn/">Harbin Engineering University</a>,
+          and a jointly trained Ph.D. student in the Department of Computer Science at the
+          <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
+          I received my bachelor's degree from the College of Intelligent Systems Science
+          and Engineering, Harbin Engineering University.
+        </p>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const modal = document.getElementById('image-zoom-modal');
-      const modalImg = document.getElementById('zoomed-image');
-      const closeBtn = document.querySelector('.close-modal');
+        <p>
+          My research interests include <strong>3D scene reconstruction</strong>,
+          <strong>simultaneous localization and mapping (SLAM)</strong>,
+          <strong>multi-sensor fusion</strong>, and <strong>robot perception</strong>.
+          My current work focuses on robust localization and dense reconstruction for
+          robotic systems, especially visual-inertial-LiDAR SLAM and 3D Gaussian Splatting.
+        </p>
 
-      const imgs = document.querySelectorAll('.hoverZoomLink');
-      imgs.forEach(img => {
-        img.addEventListener('click', function (e) {
-          e.preventDefault();
-          if (!this.getAttribute('src')) return;
-          modal.style.display = 'block';
-          modalImg.src = this.src;
-        });
-      });
+        <p>
+          Recently, I have been working on <a href="https://mags-slam.github.io/">MAGS-SLAM</a>,
+          a monocular multi-agent 3D Gaussian Splatting SLAM system for collaborative
+          photorealistic scene reconstruction from RGB video.
+        </p>
 
-      const zoomLinks = document.querySelectorAll('.inline-zoom-link');
-      zoomLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          modal.style.display = 'block';
-          modalImg.src = this.dataset.zoomSrc || this.getAttribute('href');
-        });
-      });
+        <p class="contact-links">
+          <a href="mailto:qi.shao0823@gmail.com">Email</a>
+          <span>/</span>
+          <a href="https://github.com/qishao11">Github</a>
+          <span>/</span>
+          <a href="cv.pdf">CV</a>
+        </p>
+      </div>
+    </section>
 
-      closeBtn.addEventListener('click', () => modal.style.display = 'none');
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal) modal.style.display = 'none';
-      });
+    <!-- EDIT CONTENT: News -->
+    <section id="news" class="section news-section">
+      <h2 class="section-title">News</h2>
 
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      menuToggle.addEventListener('click', function () {
-        navLinks.classList.toggle('active');
-        const icon = menuToggle.querySelector('i');
-        if (navLinks.classList.contains('active')) {
-          icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
-        } else {
-          icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
-        }
-      });
-    });
-  </script>
+      <div class="news-scroll-container">
+        <ul class="news-list">
+          <li class="timeline-item">
+            <span class="news-date">[05/2026]</span>
+            <span class="news-icon news-icon-orange">🚀</span>
+            <span>
+              Project page for our recent work
+              <a href="https://mags-slam.github.io/"><strong>MAGS-SLAM</strong></a>
+              is online - the first RGB-only multi-agent 3D Gaussian Splatting SLAM.
+            </span>
+          </li>
 
-  <!-- ########## Featured Research ########## -->
-  <table class="news-section"
-         style="border:0;border-spacing:0;border-collapse:separate;margin:auto;">
-    <tbody>
-      <tr>
-        <td style="padding:16px;width:100%;vertical-align:middle">
-          <h2 id="research" class="section-title">Featured Research</h2>
+          <li class="timeline-item">
+            <span class="news-date">[05/2026]</span>
+            <span class="news-icon news-icon-purple">🎉</span>
+            <span>Personal homepage online.</span>
+          </li>
+
+          <li class="timeline-item">
+            <span class="news-date">[08/2025]</span>
+            <span class="news-icon news-icon-green">🔓</span>
+            <span>
+              Started joint Ph.D. training in the Department of Computer Science at the
+              <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
+            </span>
+          </li>
+
+          <li class="timeline-item">
+            <span class="news-date">[08/2023]</span>
+            <span class="news-icon news-icon-purple">🎓</span>
+            <span>
+              Paper accepted by <em>IEEE International Conference on Mechatronics and Automation</em>
+              (<em>ICMA</em>).
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDIT CONTENT: Education -->
+    <section id="education" class="section">
+      <h2 class="section-title">Education</h2>
+
+      <div class="item-list">
+        <article class="info-item">
+          <div class="item-time">Aug. 2025 - Aug. 2027 (Expected)</div>
+          <div class="item-main">
+            <h3>University of Liverpool, Liverpool, U.K.</h3>
+            <p>Joint Ph.D. training, Department of Computer Science. Mentor: Prof. Baoru Huang.</p>
+          </div>
+        </article>
+
+        <article class="info-item">
+          <div class="item-time">Sept. 2023 - Jun. 2028 (Expected)</div>
+          <div class="item-main">
+            <h3>Harbin Engineering University, Harbin, China</h3>
+            <p>Ph.D. in Control Science and Engineering. Mentor: Prof. Liang Li.</p>
+          </div>
+        </article>
+
+        <article class="info-item">
+          <div class="item-time">Sept. 2019 - Jun. 2023</div>
+          <div class="item-main">
+            <h3>Harbin Engineering University, Harbin, China</h3>
+            <p>Bachelor's degree in Measurement and Control Technology and Instruments.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDIT CONTENT: Research Experience -->
+    <section id="experience" class="section">
+      <h2 class="section-title">Research Experience</h2>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <h3>3D Reconstruction and SLAM</h3>
           <p>
-            My research interests center on 3D computer vision, specifically including
-            multi-agent dense SLAM, 3D Gaussian Splatting, monocular scale recovery,
-            and collaborative photorealistic reconstruction.
+            I work on dense mapping and robust localization for robotic systems, including
+            monocular multi-agent 3D Gaussian Splatting SLAM and factor-graph-based
+            visual-inertial-LiDAR localization.
           </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </article>
 
-  <table class="news-section"
-         style="border:0;border-spacing:0px 10px;border-collapse:separate;margin:auto;">
-    <tbody>
+        <article class="research-card">
+          <h3>Multi-Source Navigation and Fusion</h3>
+          <p>
+            My previous research explored gravity and terrain matching navigation,
+            satellite clock bias product combination, Bayesian estimation, and calibration
+            methods for GPS-denied or disturbed environments.
+          </p>
+        </article>
 
-      <!-- MAGS-SLAM -->
-      <tr class="pub-row">
-        <td style="padding:12px;width:35%;vertical-align:middle">
-          <img src="images/mags_slam.jpg"
-               alt="MAGS-SLAM thumbnail"
-               style="width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;border-radius:4px;background:#f0f0f0;"
-               loading="lazy"
-               onerror="this.style.background='#f0f0f0';this.removeAttribute('src');">
-        </td>
-        <td style="padding:12px;width:65%;vertical-align:middle">
-          <span class="papertitle">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</span>
-          <br>
-          <strong>Shaoqi QI</strong> et al.
-          <br>
-          <em>Under Review</em>, 2026
-          <br>
-          <a href="https://mags-slam.github.io/">Project Page</a>
-          <p></p>
+        <article class="research-card">
+          <h3>Computer Vision for Intelligent Systems</h3>
+          <p>
+            I have also worked on visual segmentation for small targets in complex scenes,
+            including Mask R-CNN-based segmentation enhanced with PANet and Efficient
+            Channel Attention.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDIT CONTENT: Publications -->
+    <section id="research" class="section research-section">
+      <h2 class="section-title">Featured Research</h2>
+
+      <p class="section-intro">
+        My research interests center on 3D computer vision, specifically including
+        multi-agent dense SLAM, 3D Gaussian Splatting, monocular scale recovery,
+        and collaborative photorealistic reconstruction.
+      </p>
+
+      <article class="publication-card">
+        <a class="publication-media image-shell zoom-link" href="images/mags_slam.jpg" data-zoom-src="images/mags_slam.jpg">
+          <img src="images/mags_slam.jpg" alt="MAGS-SLAM thumbnail" loading="lazy" onerror="this.style.display='none';">
+        </a>
+
+        <div class="publication-body">
+          <h3>
+            MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically
+            and Photometrically Consistent Reconstruction
+          </h3>
+
+          <p class="publication-meta">
+            <strong>Shaoqi QI</strong> et al.<br>
+            <em>Under Review</em>, 2026
+          </p>
+
+          <p class="publication-links">
+            <a href="https://mags-slam.github.io/">Project Page</a>
+          </p>
+
           <p>
             The first RGB-only multi-agent 3D Gaussian Splatting SLAM for collaborative
             photorealistic scene reconstruction. We introduce compact submap communication,
             geometry- and appearance-aware loop verification, and occupancy-aware Gaussian
-            fusion, together with <em>ReplicaMultiAgent Plus</em> — a benchmark for
+            fusion, together with <em>ReplicaMultiAgent Plus</em> - a benchmark for
             collaborative Gaussian SLAM.
           </p>
-        </td>
-      </tr>
+        </div>
+      </article>
+    </section>
 
-    </tbody>
-  </table>
+    <!-- EDIT CONTENT: Selected Publications and Patents -->
+    <section id="publications" class="section">
+      <h2 class="section-title">Selected Publications and Patents</h2>
 
-  <!-- ########## Academic Service ########## -->
-  <table class="news-section"
-         style="border:0;width:100%;border-spacing:0;border-collapse:separate;margin:auto;">
-    <tbody>
-      <tr>
-        <td style="width:100%;vertical-align:middle;padding-left:15px;">
-          <h2 id="service" class="section-title">Academic Service</h2>
-          <p style="margin-bottom:0.8rem;font-size:1rem;font-weight:bold;">Reviewer of:</p>
-          <ul style="list-style-type:none;padding-left:0;margin-top:0;">
-            <li style="margin-bottom:0.5rem;padding-left:1rem;position:relative;">
-              <span style="position:absolute;left:0;color:#3b82f6;font-weight:bold;">•</span>
-              <strong>Conferences:</strong>
-              <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition</em> (<em>CVPR</em>),
-              <em>International Conference on Computer Vision</em> (<em>ICCV</em>),
-              <em>European Conference on Computer Vision</em> (<em>ECCV</em>),
-              <em>Conference on Neural Information Processing Systems</em> (<em>NeurIPS</em>)
-            </li>
-          </ul>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <ol class="publication-list">
+        <li>
+          <strong>Q. Shao</strong>, "Automatic Case Generation of Variation Testing in Navigation Software
+          Based on the Genetic Algorithm," <em>Proceedings of the 2023 IEEE International
+          Conference on Mechatronics and Automation (ICMA)</em>, pp. 214-219, 2023.
+          <a href="https://doi.org/10.1109/ICMA57695.2023.10215844">doi</a>
+        </li>
 
+        <li>
+          <strong>Qi Shao</strong>, "A multi-angle adjustable mounting bracket for measurement and
+          control instruments," China Utility Model Patent CN 213207102 U, issued May 14, 2021.
+        </li>
+      </ol>
+    </section>
+
+    <!-- EDIT CONTENT: Honors -->
+    <section id="honors" class="section">
+      <h2 class="section-title">Honors</h2>
+
+      <ul class="compact-list">
+        <li>First-Class Academic Scholarship for Doctoral Students, Harbin Engineering University, 2024-2025.</li>
+        <li>Innovation Pacesetter Award, Harbin Engineering University, 2022 and 2024.</li>
+        <li>National First Prize, "Challenge Cup" National College Student Extracurricular Academic Science and Technology Contest, 2024.</li>
+        <li>National Gold Award, China International College Students Innovation Competition, 2023.</li>
+        <li>National First Prize, "Huawei Cup" China Postgraduate Artificial Intelligence Innovation Competition, 2024.</li>
+        <li>Finalist Award, Mathematical Contest in Modeling, 2022.</li>
+      </ul>
+    </section>
+
+    <!-- EDIT CONTENT: Academic Service -->
+    <section id="service" class="section service-section">
+      <h2 class="section-title">Academic Service</h2>
+
+      <p class="service-heading">Reviewer of:</p>
+
+      <ul class="service-list">
+        <li>
+          <strong>Conferences:</strong>
+          <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition</em> (<em>CVPR</em>),
+          <em>International Conference on Computer Vision</em> (<em>ICCV</em>),
+          <em>European Conference on Computer Vision</em> (<em>ECCV</em>),
+          <em>Conference on Neural Information Processing Systems</em> (<em>NeurIPS</em>)
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="image-zoom-modal" class="zoom-modal" aria-hidden="true">
+    <button class="close-modal" type="button" aria-label="Close image preview">&times;</button>
+    <img class="modal-content" id="zoomed-image" alt="">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const modal = document.getElementById('image-zoom-modal');
+      const modalImg = document.getElementById('zoomed-image');
+      const closeBtn = document.querySelector('.close-modal');
+
+      menuToggle.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('.zoom-link').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          const visibleImage = link.querySelector('img:not([style*="display: none"])');
+          event.preventDefault();
+          if (!visibleImage) return;
+
+          modalImg.src = link.dataset.zoomSrc || link.getAttribute('href');
+          modal.setAttribute('aria-hidden', 'false');
+          modal.classList.add('active');
+        });
+      });
+
+      function closeModal() {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        modalImg.removeAttribute('src');
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (event) {
+        if (event.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && modal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
