@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Qi Shao">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Qi Shao</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="index.html">Qi Shao</a>
+
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul id="site-menu" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#news">News</a></li>
+        <li><a href="index.html#representative-work">Work</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="https://github.com/qishao11">Github</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="subpage-header">
+      <h1>Publications</h1>
+      <p>Selected publications and patents.</p>
+    </header>
+
+    <section class="section">
+      <div class="info-box-grid">
+        <article class="info-box">
+          <h2>Selected Publications</h2>
+
+          <ol class="publication-list">
+            <li>
+              <strong>Q. Shao</strong>, "Automatic Case Generation of Variation Testing in Navigation Software
+              Based on the Genetic Algorithm," <em>Proceedings of the 2023 IEEE International
+              Conference on Mechatronics and Automation (ICMA)</em>, pp. 214-219, 2023.
+              <a href="https://doi.org/10.1109/ICMA57695.2023.10215844">doi</a>
+            </li>
+          </ol>
+        </article>
+
+        <article class="info-box">
+          <h2>Patents</h2>
+
+          <ol class="publication-list">
+            <li>
+              <strong>Qi Shao</strong>, "A multi-angle adjustable mounting bracket for measurement and
+              control instruments," China Utility Model Patent CN 213207102 U, issued May 14, 2021.
+            </li>
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', function () {
+        const isOpen = navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+  </script>
+</body>
+
+</html>

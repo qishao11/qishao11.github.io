@@ -160,6 +160,29 @@ img {
   margin-bottom: 1rem;
 }
 
+.subpage-header {
+  padding: 24px 0 4px;
+}
+
+.subpage-header h1 {
+  margin: 0 0 0.35rem;
+  color: #111827;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+.subpage-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.empty-state {
+  margin: 0;
+  padding: 14px 0;
+  color: var(--muted);
+  border-top: 1px solid var(--soft-line);
+}
+
 .info-box-grid {
   display: grid;
   gap: 16px;
@@ -172,7 +195,7 @@ img {
   background: #ffffff;
 }
 
-.info-box h3 {
+.info-box h2 {
   margin: 0 0 0.85rem;
   color: #111827;
   font-size: 1.05rem;
@@ -198,8 +221,8 @@ img {
   line-height: 1.55;
 }
 
-.item-main h4,
-.research-card h4 {
+.item-main h3,
+.research-card h3 {
   margin: 0 0 0.25rem;
   color: #111827;
   font-size: 1rem;
