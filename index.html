@@ -1,92 +1,321 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Shaoqi Qi</title>
-<meta name="description" content="Shaoqi Qi — researcher in 3D computer vision, multi-agent Gaussian Splatting SLAM, and collaborative photorealistic scene reconstruction." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Shaoqi QI</title>
+  <meta name="author" content="Shaoqi QI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#3b82f6', accent: '#ef4444' },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body a:not(.nav-links a):not(.logo a) {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    body a:not(.nav-links a):not(.logo a):hover {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+
+    html, body { height: 100%; overflow-x: hidden; }
+    html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; }
+    html, body { scrollbar-width: none; }
+    html { -ms-overflow-style: none; }
+
+    .section-title {
+      text-align: left;
+      color: #333;
+      font-size: 1.5rem;
+    }
+
+    .news-section { max-width: 800px; }
+
+    .news-scroll-container {
+      padding: 0.8rem 0 0.2rem 1rem;
+      border: none;
+      border-left: 2px solid #e5e7eb;
+      border-radius: 0;
+      scrollbar-width: thin;
+    }
+    .news-scroll-container::-webkit-scrollbar { width: 5px; }
+    .news-scroll-container::-webkit-scrollbar-thumb { background-color: #9ca3af; border-radius: 3px; }
+    .news-scroll-container::-webkit-scrollbar-track { background-color: #f3f4f6; }
+
+    .zoom-modal {
+      display: none; position: fixed; z-index: 1000; padding-top: 50px;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .modal-content { margin: auto; display: block; max-width: 90%; max-height: 80%; }
+    .close-modal {
+      position: absolute; top: 20px; right: 35px;
+      color: white; font-size: 40px; font-weight: bold; cursor: pointer;
+    }
+
+    .name { margin-bottom: 0.8rem; font-size: 1.8rem; }
+    .news-scroll-container a { text-decoration: underline; }
+    .bio-text { font-size: 0.9rem; line-height: 1.8; margin-bottom: 5px; }
+    .contact-links { font-size: 1.0rem; }
+
+    .pub-row td:first-child { width: 35%; padding: 12px; vertical-align: middle; }
+    .pub-row td:last-child  { width: 65%; padding: 12px; vertical-align: middle; }
+    .pub-row p { margin-top: 10px; }
+
+    .featured-thumb {
+      width: 100%; height: auto; display: block;
+      aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px;
+    }
+
+    .papertitle { font-weight: 700; }
+    .award-note { color: red; font-weight: 700; font-style: italic; }
+
+    @media (max-width: 768px) {
+      .pub-row { display: block; }
+      .pub-row td { display: block; width: 100% !important; }
+      .pub-row td:first-child { margin-bottom: 12px; }
+    }
+  </style>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<nav class="topnav">
-  <a href="#">Home</a> /
-  <a href="#publications">Publications</a> /
-  <a href="https://github.com/qishao11">Github</a>
-</nav>
-
-<main class="container">
-
-  <header class="hero">
-    <img class="avatar" src="assets/avatar.jpg" alt="Shaoqi Qi" onerror="this.style.background='#dcdcdc';this.removeAttribute('src');">
-    <div class="hero-text">
-      <h1>Shaoqi QI <span class="zh">戚少奇</span></h1>
-      <p class="bio">
-        I am a PhD researcher in the Department of Computer Science at the
-        <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>,
-        working on <b>3D computer vision</b>. My research focuses on
-        <b>monocular multi-agent 3D Gaussian Splatting SLAM</b> — enabling
-        multiple cameras to collaboratively reconstruct a single,
-        geometrically and photometrically consistent scene from RGB video
-        alone, without depth sensors. I am especially interested in compact
-        submap communication, geometry- and appearance-aware loop
-        verification, and occupancy-aware Gaussian fusion under monocular
-        scale ambiguity.
-      </p>
-      <p class="contact">
-        <a href="mailto:shaoqi@liverpool.ac.uk">Email</a> /
-        <a href="https://github.com/qishao11">Github</a> /
-        <a href="#">Google Scholar</a> /
-        <a href="#">LinkedIn</a> /
-        <a href="assets/cv.pdf">CV</a>
-      </p>
-    </div>
-  </header>
-
-  <section>
-    <h2>News</h2>
-    <ul class="news-list">
-      <li><span class="date">[05/2026]</span> 🚀 Project page for <b>MAGS-SLAM</b> is online — see <a href="https://mags-slam.github.io/">mags-slam.github.io</a>.</li>
-      <li><span class="date">[05/2026]</span> 🎉 Personal homepage online.</li>
-    </ul>
-  </section>
-
-  <section id="publications">
-    <h2>Featured Research</h2>
-
-    <article class="research-card">
-      <div class="rc-thumb"></div>
-      <div class="rc-body">
-        <h3 class="rc-title">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</h3>
-        <p class="rc-authors"><b>Shaoqi QI</b> et al.</p>
-        <p class="rc-venue"><i>Under review</i>, 2026</p>
-        <p class="rc-desc">
-          The first RGB-only multi-agent 3D Gaussian Splatting SLAM for
-          collaborative photorealistic scene reconstruction. We introduce
-          compact submap communication, geometry- and appearance-aware loop
-          verification, and occupancy-aware Gaussian fusion, together with
-          <i>ReplicaMultiAgent Plus</i> — a benchmark for collaborative
-          Gaussian SLAM.
-        </p>
-        <p class="rc-links">
-          <a href="https://mags-slam.github.io/">Project Page</a>
-        </p>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">Shaoqi QI</a>
       </div>
-    </article>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#research">Publications</a></li>
+        <li><a href="https://github.com/qishao11">Github</a></li>
+      </ul>
+      <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+    </div>
+  </nav>
 
-  </section>
+  <div class="main-content">
+    <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:auto;">
+      <tbody>
+        <tr>
+          <td style="padding:0">
+            <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:2.5%;width:37%;max-width:37%">
+                    <a href="images/profile.jpg">
+                      <img style="width:100%;max-width:100%;object-fit:cover;border-radius:4px;background:#dcdcdc;aspect-ratio:1/1.2;"
+                           alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"
+                           onerror="this.style.background='#dcdcdc';this.removeAttribute('src');">
+                    </a>
+                  </td>
+                  <td style="padding:2.5%;width:63%;vertical-align:middle">
+                    <p class="name" style="text-align:center;">
+                      Shaoqi QI | 戚少奇
+                    </p>
+                    <p class="bio-text">
+                      I am a Ph.D. researcher in the Department of Computer Science at the
+                      <a href="https://www.liverpool.ac.uk/">University of Liverpool</a>.
+                      My research interests center on <strong>3D computer vision</strong>,
+                      with a focus on <strong>monocular multi-agent 3D Gaussian Splatting SLAM</strong>
+                      — enabling multiple cameras to collaboratively reconstruct a single,
+                      geometrically and photometrically consistent scene from RGB video alone,
+                      without depth sensors.
+                    </p>
+                    <p class="bio-text">
+                      I am especially interested in <strong>compact submap communication</strong>
+                      between agents, <strong>geometry- and appearance-aware loop verification</strong>,
+                      and <strong>occupancy-aware Gaussian fusion</strong> under monocular scale
+                      ambiguity. My recent work has been released on the project page of
+                      <a href="https://mags-slam.github.io/">MAGS-SLAM</a>📈.
+                    </p>
+                    <p class="bio-text">
+                      Beyond research, I care about reproducible, modular systems that survive
+                      contact with real video. I am always open to collaborations on collaborative
+                      mapping, dense SLAM, and Gaussian Splatting in the wild.
+                    </p>
 
-  <section>
-    <h2>Academic Service</h2>
-    <ul class="service-list">
-      <li><b>Conference Reviewer:</b> CVPR, ICCV, ECCV, NeurIPS (when invited)</li>
-    </ul>
-  </section>
+                    <p class="contact-links" style="text-align:left;margin-top:1rem;">
+                      <a href="mailto:shaoqi@liverpool.ac.uk">Email</a> &nbsp;/&nbsp;
+                      <a href="https://github.com/qishao11">Github</a> &nbsp;/&nbsp;
+                      <a href="#">Scholar</a> &nbsp;/&nbsp;
+                      <a href="#">LinkedIn</a> &nbsp;/&nbsp;
+                      <a href="cv.pdf">CV</a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-</main>
+            <!-- ########## News ########## -->
+            <section class="news-section">
+              <h2 id="news" class="section-title">News</h2>
+              <div class="news-scroll-container scrollbar-thin scrollbar-thumb-gray">
+                <ul class="space-y-3 text-gray-800">
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[05/2026]</span>
+                    <span class="text-orange-500">🚀</span>
+                    Project page for our recent work
+                    <a href="https://mags-slam.github.io/"><strong>MAGS-SLAM</strong></a>
+                    is online — the first RGB-only multi-agent 3D Gaussian Splatting SLAM.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[05/2026]</span>
+                    <span class="text-purple-500">🎉</span>
+                    Personal homepage online.
+                  </li>
+                  <li class="timeline-item">
+                    <span class="text-gray-600">[XX/20XX]</span>
+                    <span class="text-emerald-500">🔓</span>
+                    Placeholder — replace with real news entries as they happen.
+                  </li>
+                </ul>
+              </div>
+              <div id="image-zoom-modal" class="zoom-modal">
+                <span class="close-modal">&times;</span>
+                <img class="modal-content" id="zoomed-image">
+              </div>
+            </section>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const modal = document.getElementById('image-zoom-modal');
+      const modalImg = document.getElementById('zoomed-image');
+      const closeBtn = document.querySelector('.close-modal');
+
+      const imgs = document.querySelectorAll('.hoverZoomLink');
+      imgs.forEach(img => {
+        img.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (!this.getAttribute('src')) return;
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+        });
+      });
+
+      const zoomLinks = document.querySelectorAll('.inline-zoom-link');
+      zoomLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          modal.style.display = 'block';
+          modalImg.src = this.dataset.zoomSrc || this.getAttribute('href');
+        });
+      });
+
+      closeBtn.addEventListener('click', () => modal.style.display = 'none');
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.remove('fa-bars'); icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times'); icon.classList.add('fa-bars');
+        }
+      });
+    });
+  </script>
+
+  <!-- ########## Featured Research ########## -->
+  <table class="news-section"
+         style="border:0;border-spacing:0;border-collapse:separate;margin:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:16px;width:100%;vertical-align:middle">
+          <h2 id="research" class="section-title">Featured Research</h2>
+          <p>
+            My research interests center on 3D computer vision, specifically including
+            multi-agent dense SLAM, 3D Gaussian Splatting, monocular scale recovery,
+            and collaborative photorealistic reconstruction.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="news-section"
+         style="border:0;border-spacing:0px 10px;border-collapse:separate;margin:auto;">
+    <tbody>
+
+      <!-- MAGS-SLAM -->
+      <tr class="pub-row">
+        <td style="padding:12px;width:35%;vertical-align:middle">
+          <img src="images/mags_slam.jpg"
+               alt="MAGS-SLAM thumbnail"
+               style="width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;border-radius:4px;background:#f0f0f0;"
+               loading="lazy"
+               onerror="this.style.background='#f0f0f0';this.removeAttribute('src');">
+        </td>
+        <td style="padding:12px;width:65%;vertical-align:middle">
+          <span class="papertitle">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</span>
+          <br>
+          <strong>Shaoqi QI</strong> et al.
+          <br>
+          <em>Under Review</em>, 2026
+          <br>
+          <a href="https://mags-slam.github.io/">Project Page</a>
+          <p></p>
+          <p>
+            The first RGB-only multi-agent 3D Gaussian Splatting SLAM for collaborative
+            photorealistic scene reconstruction. We introduce compact submap communication,
+            geometry- and appearance-aware loop verification, and occupancy-aware Gaussian
+            fusion, together with <em>ReplicaMultiAgent Plus</em> — a benchmark for
+            collaborative Gaussian SLAM.
+          </p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <!-- ########## Academic Service ########## -->
+  <table class="news-section"
+         style="border:0;width:100%;border-spacing:0;border-collapse:separate;margin:auto;">
+    <tbody>
+      <tr>
+        <td style="width:100%;vertical-align:middle;padding-left:15px;">
+          <h2 id="service" class="section-title">Academic Service</h2>
+          <p style="margin-bottom:0.8rem;font-size:1rem;font-weight:bold;">Reviewer of:</p>
+          <ul style="list-style-type:none;padding-left:0;margin-top:0;">
+            <li style="margin-bottom:0.5rem;padding-left:1rem;position:relative;">
+              <span style="position:absolute;left:0;color:#3b82f6;font-weight:bold;">•</span>
+              <strong>Conferences:</strong>
+              <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition</em> (<em>CVPR</em>),
+              <em>International Conference on Computer Vision</em> (<em>ICCV</em>),
+              <em>European Conference on Computer Vision</em> (<em>ECCV</em>),
+              <em>Conference on Neural Information Processing Systems</em> (<em>NeurIPS</em>)
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>
