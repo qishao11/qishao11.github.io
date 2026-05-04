@@ -1,14 +1,3 @@
-# qishao11.github.io
-
-Personal homepage. Hand-coded HTML, modeled after [zhengchunran.com](https://zhengchunran.com/). Tailwind via CDN, FontAwesome 4.7 via CDN, no build step.
-
-## Local preview
-
-```bash
-python3 -m http.server 8000
-# open http://localhost:8000
-```
-
 ## Deploy
 
 GitHub Pages auto-publishes `main` to https://qishao11.github.io after every push.
