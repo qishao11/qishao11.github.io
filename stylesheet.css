@@ -160,6 +160,25 @@ img {
   margin-bottom: 1rem;
 }
 
+.info-box-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.info-box {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.info-box h3 {
+  margin: 0 0 0.85rem;
+  color: #111827;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
 .item-list {
   display: grid;
   gap: 14px;
@@ -179,8 +198,8 @@ img {
   line-height: 1.55;
 }
 
-.item-main h3,
-.research-card h3 {
+.item-main h4,
+.research-card h4 {
   margin: 0 0 0.25rem;
   color: #111827;
   font-size: 1rem;
@@ -193,16 +212,17 @@ img {
 
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
 .research-card {
-  min-height: 100%;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #ffffff;
+  padding-top: 12px;
+  border-top: 1px solid var(--soft-line);
+}
+
+.research-card:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
 .research-card p {
@@ -249,7 +269,7 @@ img {
 }
 
 .profile-photo .image-shell {
-  aspect-ratio: 1 / 1.2;
+  aspect-ratio: 1 / 1;
 }
 
 .image-shell img {
@@ -360,7 +380,7 @@ img {
 }
 
 .publication-media {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 810 / 370;
   background: #f0f0f0;
 }
 
