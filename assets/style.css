@@ -172,6 +172,12 @@ section p { margin: 0 0 12px; }
   font-size: 14px;
 }
 .pub-venue { color: var(--muted); }
+.pub-summary {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.55;
+}
 .pub-links a { font-size: 13px; }
 
 /* ---------- Projects ---------- */

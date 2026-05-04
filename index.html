@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Shaoqi Qi</title>
-<meta name="description" content="Shaoqi Qi — researcher in 3D computer vision, dynamic scene reconstruction, and Gaussian Splatting." />
+<meta name="description" content="Shaoqi Qi — researcher in 3D computer vision, multi-agent Gaussian Splatting SLAM, and collaborative photorealistic scene reconstruction." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -45,15 +45,20 @@
     <h2>About</h2>
     <p>
       I am a PhD researcher at the University of Liverpool working on
-      <strong>3D computer vision</strong>. My current focus is
-      <em>dynamic 3D scene reconstruction</em> — combining recurrent pointmap
-      transformers with <strong>3D Gaussian Splatting</strong> in a
-      frozen-backbone, plug-in fashion.
+      <strong>3D computer vision</strong>. My research focuses on
+      <strong>monocular multi-agent 3D Gaussian Splatting SLAM</strong> —
+      enabling multiple cameras to collaboratively reconstruct a single,
+      geometrically and photometrically consistent scene from RGB video alone,
+      without depth sensors.
     </p>
     <p>
-      Recent work spans monocular SLAM, multi-agent collaborative mapping, and
-      pose estimation under casual capture. I care about reproducible, modular
-      systems that survive contact with real video.
+      I am especially interested in: (i) compact submap communication that
+      lets agents share scene knowledge without exchanging raw observations
+      or dense maps; (ii) geometry- and appearance-aware loop verification
+      for robust inter-agent association; and (iii) occupancy-aware Gaussian
+      fusion that resolves monocular scale ambiguity in collaborative
+      settings. I care about reproducible, modular systems that survive
+      contact with real video.
     </p>
     <p class="aside">Outside research: long-distance running, film photography, and (occasionally) cooking experiments that should not be rerun.</p>
   </section>
@@ -61,8 +66,8 @@
   <section id="news">
     <h2>News</h2>
     <ul class="news-list">
+      <li><span class="date">2026-05</span> Project page for <a href="https://mags-slam.github.io/">MAGS-SLAM</a> is online.</li>
       <li><span class="date">2026-05</span> Personal homepage online.</li>
-      <!-- Add entries: <li><span class="date">YYYY-MM</span> ...</li> -->
     </ul>
   </section>
 
@@ -72,35 +77,38 @@
       <a href="#">Full list on Google Scholar →</a>
     </p>
 
-    <!-- Replace the example below with real entries -->
     <article class="pub">
       <div class="pub-thumb"></div>
       <div class="pub-body">
-        <h3 class="pub-title">Paper Title Goes Here</h3>
-        <p class="pub-authors"><strong>Shaoqi Qi</strong>, Co-Author A, Co-Author B</p>
-        <p class="pub-venue"><em>Venue</em>, Year</p>
+        <h3 class="pub-title">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</h3>
+        <p class="pub-authors"><strong>Shaoqi Qi</strong> et al.</p>
+        <p class="pub-venue"><em>Under review</em>, 2026</p>
+        <p class="pub-summary">
+          The first RGB-only multi-agent 3D Gaussian Splatting SLAM for
+          collaborative photorealistic scene reconstruction. Compact submap
+          communication, geometry- and appearance-aware loop verification,
+          and occupancy-aware Gaussian fusion address monocular scale
+          ambiguity in collaborative settings. We also introduce
+          <em>ReplicaMultiAgent Plus</em>, a benchmark for collaborative
+          Gaussian SLAM.
+        </p>
         <p class="pub-links">
-          <a href="#">paper</a> ·
-          <a href="#">code</a> ·
-          <a href="#">project page</a> ·
-          <a href="#">bibtex</a>
+          <a href="https://mags-slam.github.io/">project page</a>
         </p>
       </div>
     </article>
-
-    <!-- duplicate <article class="pub">...</article> for more entries -->
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project-grid">
-      <a class="project-card" href="#">
+      <a class="project-card" href="https://mags-slam.github.io/">
         <h3>MAGS-SLAM</h3>
-        <p>RGB-only multi-agent Gaussian SLAM with dual-protocol trajectory evaluation.</p>
+        <p>Monocular multi-agent 3D Gaussian Splatting SLAM. RGB-only collaborative reconstruction with compact submap communication and occupancy-aware Gaussian fusion.</p>
       </a>
-      <a class="project-card" href="#">
-        <h3>Project Two</h3>
-        <p>Short one-line description.</p>
+      <a class="project-card" href="https://mags-slam.github.io/">
+        <h3>ReplicaMultiAgent Plus</h3>
+        <p>Benchmark for evaluating collaborative Gaussian SLAM under monocular, multi-agent settings.</p>
       </a>
     </div>
   </section>
