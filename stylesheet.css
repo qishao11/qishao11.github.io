@@ -107,7 +107,7 @@ body {
   background: var(--canvas);
   font-family: "HarmonyOS Sans", "HarmonyOS Sans SC", "Noto Sans SC", "PingFang SC", "PingFang TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -123,7 +123,7 @@ a:hover {
 }
 
 p {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.5rem;
 }
 
 img {
@@ -298,11 +298,11 @@ img {
 
 .item-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .info-item {
-  padding: 0 0 12px;
+  padding: 0 0 10px;
   border-bottom: 1px solid var(--soft-line);
 }
 
@@ -360,7 +360,7 @@ img {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .publication-list,
@@ -454,10 +454,10 @@ img {
 }
 
 .profile-copy p {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.65rem;
   color: var(--muted);
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.55;
 }
 
 .profile-copy p:last-child {
@@ -491,10 +491,10 @@ img {
 }
 
 .hero-detail .compact-list li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .hero-detail .compact-list li:last-child {
@@ -502,19 +502,24 @@ img {
 }
 
 .hero-detail .item-list {
-  gap: 10px;
+  gap: 6px;
+}
+
+.hero-detail .info-item {
+  padding-bottom: 6px;
 }
 
 .hero-detail .info-item p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .hero-detail .item-head h3 {
   margin: 0;
   font-size: 15px;
+  line-height: 1.4;
 }
 
 .contact-links {
@@ -805,7 +810,7 @@ img {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.58;
 }
 
 .story-main strong {
