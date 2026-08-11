@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Qi Shao">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project | Qi Shao</title>
+  <title>My Story | Qi Shao</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -27,8 +27,8 @@
       <ul id="site-menu" class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="projects.html" class="active">Project</a></li>
-        <li><a href="story.html">My Story</a></li>
+        <li><a href="projects.html">Project</a></li>
+        <li><a href="story.html" class="active">My Story</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </div>
@@ -36,43 +36,73 @@
 
   <main class="page">
     <header class="subpage-header">
-      <h1>Project</h1>
-      <p>Selected technical and research-oriented projects.</p>
+      <h1>My Story</h1>
+      <p>A timeline of how I got here.</p>
     </header>
 
+    <!-- EDIT CONTENT: Timeline entries -->
     <section class="section">
-      <article class="project-card">
-        <a class="zoom-link image-shell project-media" href="images/ascend-rice-ai-cover.png" data-zoom-src="images/ascend-rice-ai-cover.png">
-          <img src="images/ascend-rice-ai-cover.png" alt="Qi Shao presenting the Ascend AI rice processing project" onerror="this.style.display='none';">
-        </a>
-
-        <div class="project-body">
-          <p class="project-meta">Featured Project / Ascend AI Developer Stories, 2023</p>
-          <h3>Ascend AI-Based Moderate Rice Processing Solution</h3>
-          <p>
-            I worked with my team on <strong>Shengzhi Shimi</strong>, an Ascend AI-powered
-            solution for intelligent rice processing. The system combines Ascend computing,
-            MindSpore, and edge-cloud heterogeneous collaboration to inspect rice quality
-            during production and support more stable, moderate processing.
-          </p>
-          <p>
-            The project targets small, adhesive grain features such as rice embryos and
-            achieves <strong>98.5% segmentation accuracy</strong>, while detecting quality
-            indicators including whiteness, embryo retention, chalkiness, and embryo integrity.
-          </p>
-          <div class="project-tags" aria-label="Project keywords">
-            <span>Ascend AI</span>
-            <span>MindSpore</span>
-            <span>Small-Object Segmentation</span>
-            <span>Smart Agriculture</span>
+      <div class="story-timeline">
+        <div class="story-entry">
+          <p class="story-date">2019</p>
+          <div class="story-main">
+            <h3>Independent admission assessment, Harbin Institute of Technology</h3>
+            <p>
+              Engineering experimental class in Computer Science and Electronic Communication.
+              My first assessment outside the classroom, and the first time I chose a direction
+              rather than being assigned one.
+            </p>
+            <a class="zoom-link image-shell story-media" href="images/hit-admission.png" data-zoom-src="images/hit-admission.png">
+              <img src="images/hit-admission.png" alt="Independent admission platform result page, 2019" onerror="this.style.display='none';">
+            </a>
           </div>
-          <p class="project-links">
-            <a href="https://mp.weixin.qq.com/s/vDVNTr2NgTSDnGcO1pzpyA">Article</a>
-            <span>/</span>
-            <a href="https://blog.csdn.net/csdnnews/article/details/130679244">Original source</a>
-          </p>
         </div>
-      </article>
+
+        <div class="story-entry">
+          <p class="story-date">2019 – 2023</p>
+          <div class="story-main">
+            <h3>B.Eng., Harbin Engineering University</h3>
+            <p>
+              College of Intelligent Systems Science and Engineering. Where control theory
+              turned into something I wanted to keep doing.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-entry">
+          <p class="story-date">2023</p>
+          <div class="story-main">
+            <h3>First paper, and first industry project</h3>
+            <p>
+              A paper accepted at the <em>IEEE International Conference on Mechatronics and
+              Automation</em>, and the Ascend AI rice processing project with my team — which
+              later led to serving as a Huawei Developer Evangelist.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-entry">
+          <p class="story-date">2023</p>
+          <div class="story-main">
+            <h3>Started Ph.D. study</h3>
+            <p>
+              Control Science and Engineering at Harbin Engineering University, moving toward
+              3D scene representation and SLAM for multi-robot and embodied AI.
+            </p>
+          </div>
+        </div>
+
+        <div class="story-entry">
+          <p class="story-date">2025</p>
+          <div class="story-main">
+            <h3>Joint Ph.D. training, University of Liverpool</h3>
+            <p>
+              Department of Computer Science — a different country, a different way of asking
+              research questions.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
