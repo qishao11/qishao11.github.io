@@ -107,7 +107,7 @@ body {
   background: var(--canvas);
   font-family: "HarmonyOS Sans", "HarmonyOS Sans SC", "Noto Sans SC", "PingFang SC", "PingFang TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -123,7 +123,7 @@ a:hover {
 }
 
 p {
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.6rem;
 }
 
 img {
@@ -220,12 +220,12 @@ img {
 .page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 8px 32px 72px;
+  padding: 8px 32px 56px;
 }
 
 .section {
-  margin-top: 20px;
-  padding: 32px 36px;
+  margin-top: 16px;
+  padding: 26px 30px;
   background: var(--card);
   border-radius: var(--radius-card);
 }
@@ -283,7 +283,7 @@ img {
 }
 
 .info-box {
-  padding: 20px;
+  padding: 18px 20px;
   background: var(--sunken);
   border-radius: var(--radius-inner);
 }
@@ -298,11 +298,11 @@ img {
 
 .item-list {
   display: grid;
-  gap: 14px;
+  gap: 12px;
 }
 
 .info-item {
-  padding: 0 0 14px;
+  padding: 0 0 12px;
   border-bottom: 1px solid var(--soft-line);
 }
 
@@ -360,7 +360,7 @@ img {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .publication-list,
@@ -371,7 +371,7 @@ img {
 
 .publication-list li,
 .compact-list li {
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.45rem;
   padding-left: 0.25rem;
 }
 
@@ -388,8 +388,8 @@ img {
   grid-template-columns: 300px 1fr;
   gap: 56px;
   align-items: start;
-  margin-top: 20px;
-  padding: 44px 36px;
+  margin-top: 16px;
+  padding: 34px 30px;
   background: var(--card);
   border-radius: var(--radius-card);
 }
@@ -445,7 +445,7 @@ img {
 
 /* Display text S, per the HarmonyOS type scale: 38 / Light */
 .name {
-  margin: 1.4rem 0 0.5rem;
+  margin: 1.1rem 0 0.4rem;
   font-size: 38px;
   font-weight: 300;
   line-height: 1.25;
@@ -454,10 +454,10 @@ img {
 }
 
 .profile-copy p {
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.8rem;
   color: var(--muted);
   font-size: 16px;
-  line-height: 1.85;
+  line-height: 1.62;
 }
 
 .profile-copy p:last-child {
@@ -472,9 +472,9 @@ img {
 .hero-detail {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px 40px;
-  margin-top: 1.75rem;
-  padding-top: 1.6rem;
+  gap: 18px 40px;
+  margin-top: 1.3rem;
+  padding-top: 1.2rem;
   border-top: 1px solid var(--soft-line);
 }
 
@@ -483,7 +483,7 @@ img {
 }
 
 .hero-detail h2 {
-  margin: 0 0 0.8rem;
+  margin: 0 0 0.6rem;
   color: var(--text);
   font-size: 20px;
   font-weight: 700;
@@ -491,10 +491,10 @@ img {
 }
 
 .hero-detail .compact-list li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 .hero-detail .compact-list li:last-child {
@@ -502,14 +502,14 @@ img {
 }
 
 .hero-detail .item-list {
-  gap: 12px;
+  gap: 10px;
 }
 
 .hero-detail .info-item p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .hero-detail .item-head h3 {
@@ -522,7 +522,7 @@ img {
   flex-wrap: wrap;
   gap: 0.35rem 0.6rem;
   justify-content: center;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   font-size: 16px;
 }
 
@@ -539,7 +539,7 @@ img {
 
 .news-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -552,7 +552,7 @@ img {
   align-items: baseline;
   padding-left: 0.25rem;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .news-date {
@@ -637,10 +637,10 @@ img {
 }
 
 .talk-main p {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .talk-main p:last-child {
@@ -673,10 +673,10 @@ img {
 }
 
 .project-body p {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.5rem;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.75;
+  line-height: 1.62;
 }
 
 .project-body strong {
@@ -752,7 +752,7 @@ img {
   display: grid;
   grid-template-columns: 108px 1fr;
   gap: 28px;
-  padding: 22px 0;
+  padding: 18px 0;
   border-bottom: 1px solid var(--soft-line);
 }
 
@@ -760,7 +760,7 @@ img {
 .story-entry::before {
   content: "";
   position: absolute;
-  top: 27px;
+  top: 23px;
   left: -36px;
   width: 10px;
   height: 10px;
@@ -805,7 +805,7 @@ img {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
 .story-main strong {
@@ -833,19 +833,19 @@ img {
   display: grid;
   grid-template-columns: 108px 1fr;
   gap: 28px;
-  padding: 12px 12px 12px 0;
+  padding: 10px 12px 10px 0;
   border-bottom: 1px solid var(--soft-line);
   border-radius: var(--radius-chip);
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.55;
   transition: background 0.15s ease;
 }
 
 .brief-row::before {
   content: "";
   position: absolute;
-  top: 21px;
+  top: 18px;
   left: -33px;
   width: 6px;
   height: 6px;
