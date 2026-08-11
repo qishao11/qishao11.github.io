@@ -64,6 +64,7 @@
   --radius-card: 16px;
   --radius-inner: 12px;
   --radius-chip: 8px;
+  --radius-lg: 24px;
 
   --orange: #ED6F21;
   --purple: #7B4FEA;
@@ -268,8 +269,12 @@ img {
 
 .info-box-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+}
+
+/* Opt-in two-column layout; single-column pages keep full width. */
+.info-box-grid--split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
 }
 
@@ -394,11 +399,11 @@ img {
 }
 
 .profile-photo {
-  padding: 0 12px;
+  padding: 0;
 }
 
 .profile-side .image-shell {
-  border-radius: 50%;
+  border-radius: var(--radius-lg);
 }
 
 .profile-role {
@@ -462,6 +467,54 @@ img {
 .profile-copy strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.hero-detail {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 40px;
+  margin-top: 1.75rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--soft-line);
+}
+
+.hero-detail-col {
+  min-width: 0;
+}
+
+.hero-detail h2 {
+  margin: 0 0 0.8rem;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.hero-detail .compact-list li {
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.hero-detail .compact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.hero-detail .item-list {
+  gap: 12px;
+}
+
+.hero-detail .info-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.hero-detail .item-head h3 {
+  margin: 0;
+  font-size: 15px;
 }
 
 .contact-links {
@@ -930,6 +983,10 @@ img {
     gap: 20px;
   }
 
+  .hero-detail {
+    grid-template-columns: 1fr;
+  }
+
   .profile-org br {
     display: none;
   }
@@ -943,7 +1000,7 @@ img {
     font-size: 30px;
   }
 
-  .info-box-grid {
+  .info-box-grid--split {
     grid-template-columns: 1fr;
   }
 
