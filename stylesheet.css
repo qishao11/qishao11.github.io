@@ -570,16 +570,24 @@ img {
   color: #111827;
 }
 
-.story-media {
-  max-width: 460px;
+.story-figure {
+  display: block;
+  overflow: hidden;
+  max-width: 440px;
   margin-top: 0.85rem;
-  aspect-ratio: 1376 / 1000;
   background: #ffffff;
   border: 1px solid var(--line);
+  border-radius: 4px;
 }
 
-.story-media img {
-  object-fit: contain;
+.story-figure-sm {
+  max-width: 320px;
+}
+
+.story-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .service-heading {
