@@ -7,7 +7,6 @@ GitHub Pages auto-publishes `main` to https://qishao11.github.io after every pus
 - `index.html` — edit homepage content here: profile, links, News, and Representative Academic Work
 - `about.html` — edit Education, Research Experience, Honors, and Academic Service
 - `publications.html` — edit selected publications and patents
-- `story.html` — edit the My Story timeline: Milestones, then the condensed list
 - `stylesheet.css` — edit visual style here: layout, spacing, colors, mobile behavior
 - `styles.css` — optional small overrides, loaded after `stylesheet.css`
 - `images/Personal.jpg` — your photo
