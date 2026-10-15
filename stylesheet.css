@@ -146,7 +146,7 @@ img {
 
 .nav-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 16px 32px;
   align-items: center;
@@ -222,7 +222,7 @@ img {
 /* Page shell and containers */
 
 .page {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 8px 32px 56px;
 }
