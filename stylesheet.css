@@ -291,7 +291,8 @@ img {
 
 .info-box {
   padding: 18px 20px;
-  background: var(--sunken);
+  background: var(--card);
+  border: 1px solid var(--line);
   border-radius: var(--radius-inner);
 }
 
