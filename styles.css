@@ -611,3 +611,49 @@ body {
     line-height: 1.5;
   }
 }
+
+/* Phone menu: a compact card under the menu button instead of a full-width bar */
+
+@media (max-width: 768px) {
+  .nav-links {
+    top: calc(100% + 6px);
+    right: 16px;
+    left: auto;
+    min-width: 168px;
+    padding: 6px;
+    background: #FFFFFF;
+    border: 1px solid var(--warm-line);
+    border-radius: 12px;
+    box-shadow: 0 12px 32px -12px rgba(31, 30, 29, 0.22);
+  }
+
+  .nav-links li {
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 9px 14px;
+    border-radius: 8px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: var(--ivory);
+  }
+
+  .nav-links a::after,
+  .nav-links a:hover::after {
+    display: none;
+  }
+
+  .nav-links a.active::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    margin: 0 10px -1px -4px;
+    background: var(--coral);
+    border-radius: 2px;
+  }
+}
