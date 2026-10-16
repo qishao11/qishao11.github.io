@@ -657,3 +657,39 @@ body {
     border-radius: 2px;
   }
 }
+
+/* Phone refinements: smaller menu card; project text leads, image follows */
+
+@media (max-width: 768px) {
+  .nav-links {
+    min-width: 136px;
+    padding: 4px;
+    border-radius: 10px;
+  }
+
+  .nav-links a {
+    padding: 7px 12px;
+    font-size: 14.5px;
+    border-radius: 7px;
+  }
+
+  .nav-links a.active::before {
+    height: 12px;
+    margin-right: 8px;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project-body {
+    order: 1;
+  }
+
+  .project-media {
+    order: 2;
+    aspect-ratio: 16 / 9 !important;
+  }
+}
