@@ -272,8 +272,19 @@ body {
   padding: 18px 0;
 }
 
-.publication-list a + a {
-  margin-left: 0.7em;
+/* Publication list: links sit on their own line, separated by slashes */
+.publication-list li {
+  margin-bottom: 1.1rem;
+}
+
+.pub-links {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.pub-links span {
+  margin: 0 0.45em;
+  color: var(--tertiary);
 }
 
 /* Keep news icons on the first line when an item wraps */
