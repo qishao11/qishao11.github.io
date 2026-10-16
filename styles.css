@@ -6,6 +6,10 @@
 :root {
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --measure: 44rem;
+  --ivory: #FAF9F5;
+  --oat: #F0EEE6;
+  --warm-line: #E8E6DC;
+  --coral: #D97757;
 }
 
 body {
@@ -139,7 +143,7 @@ body {
 .compact-list li::marker,
 .service-list li::marker,
 .publication-list li::marker {
-  color: var(--tertiary);
+  color: var(--coral);
 }
 
 /* Monospace metadata */
@@ -300,4 +304,50 @@ body {
   color: var(--text);
   font-size: 16px;
   line-height: 1.45;
+}
+
+/* Accents taken from the warm palette: ivory bars, oat chips, coral marks */
+
+::selection {
+  background: rgba(217, 119, 87, 0.2);
+}
+
+.navbar {
+  background: rgba(250, 249, 245, 0.94);
+  border-bottom-color: var(--warm-line);
+}
+
+.section {
+  border-top-color: var(--warm-line);
+}
+
+.section-title::before,
+.subpage-header h1::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin-bottom: 18px;
+  background: var(--coral);
+  border-radius: 2px;
+}
+
+.news-icon {
+  color: var(--coral);
+}
+
+.project-tags span {
+  padding: 3px 10px;
+  color: var(--muted);
+  background: var(--oat);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.publication-media,
+.project-media,
+.profile-side .image-shell {
+  background: var(--ivory);
 }
