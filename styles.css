@@ -399,3 +399,16 @@ body {
 .profile-side .image-shell {
   background: var(--ivory);
 }
+
+/* About page: no grey text; secondary levels use the ink colour */
+
+.page-about {
+  --muted: #141413;
+  --tertiary: #141413;
+}
+
+/* Talk dates match the talk title's size and first line */
+.talk-time {
+  font-size: 16px;
+  line-height: calc(17px * 1.5);
+}
