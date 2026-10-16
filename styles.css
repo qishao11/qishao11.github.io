@@ -1,1 +1,397 @@
-/* Reserved for future overrides. This file loads after stylesheet.css. */
+/* Overrides; this file loads after stylesheet.css.
+   Flat editorial layout: no card frames, large serif headings, ink-colored
+   underlined links, monospace metadata, and a single framed "window"
+   treatment reserved for publication figures. */
+
+:root {
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  --measure: 44rem;
+  --ink-line: rgba(31, 30, 29, 0.22);
+}
+
+body {
+  font-size: 17px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+/* Navigation: quieter, hairline only */
+
+.navbar {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.nav-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav-links a.active {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Links: ink with a soft underline; the accent appears on hover only */
+
+.page a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-line);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.page a:hover {
+  color: var(--brand);
+  text-decoration-color: currentColor;
+}
+
+.page a.image-shell,
+.page a.story-figure {
+  text-decoration: none;
+}
+
+/* Containers lose their frames; sections are separated by space and a rule */
+
+.section,
+.hero {
+  margin-top: 0;
+  padding: 64px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.hero {
+  gap: 72px;
+  padding-top: 56px;
+  border-top: 0;
+}
+
+.info-box-grid {
+  gap: 56px;
+}
+
+.info-box {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.subpage-header {
+  padding: 64px 0 16px;
+}
+
+.subpage-header h1 {
+  font-size: 52px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.subpage-header p {
+  margin-top: 0.6rem;
+  font-size: 18px;
+}
+
+/* Type scale */
+
+.name {
+  margin-top: 1.4rem;
+  font-size: 44px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.profile-role {
+  margin-top: 0.6rem;
+}
+
+.section-title {
+  margin-bottom: 1.75rem;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+
+.info-box h2,
+.hero-detail h2 {
+  margin-bottom: 1.1rem;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.hero-detail {
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.profile-copy p,
+.research-card p,
+.talk-main p,
+.project-body p,
+.story-main p,
+.publication-body p {
+  max-width: var(--measure);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.profile-copy p {
+  max-width: none;
+  color: var(--text);
+}
+
+.compact-list li::marker,
+.service-list li::marker,
+.publication-list li::marker {
+  color: var(--tertiary);
+}
+
+/* Monospace metadata */
+
+.item-time,
+.news-date,
+.talk-time,
+.story-date,
+.brief-date,
+.project-meta,
+.publication-meta {
+  color: var(--tertiary);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.publication-meta,
+.project-meta {
+  margin-bottom: 0.5rem;
+  text-transform: none;
+}
+
+.project-tags span {
+  padding: 3px 10px;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* News: plain list, no rail */
+
+.news-scroll-container {
+  padding: 0;
+  border-left: 0;
+}
+
+.news-list {
+  gap: 0.75rem;
+}
+
+.timeline-item {
+  gap: 0.9rem;
+  padding-left: 0;
+  font-size: 17px;
+}
+
+/* Publication figures sit in a window frame with three traffic-light dots */
+
+.publication-media,
+.project-media {
+  position: relative;
+  aspect-ratio: auto !important;
+  padding-top: 32px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 30, 29, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(31, 30, 29, 0.04), 0 8px 24px -12px rgba(31, 30, 29, 0.10);
+}
+
+.publication-media::before,
+.project-media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 32px;
+  border-bottom: 1px solid rgba(31, 30, 29, 0.08);
+  background:
+    radial-gradient(circle at 18px 16px, #EC6A5E 4.5px, transparent 5px),
+    radial-gradient(circle at 34px 16px, #F4BF4F 4.5px, transparent 5px),
+    radial-gradient(circle at 50px 16px, #61C554 4.5px, transparent 5px);
+}
+
+.publication-media img,
+.project-media img {
+  height: auto;
+}
+
+.publication-card {
+  align-items: start;
+  gap: 40px;
+  margin-top: 0;
+  padding: 32px 0;
+}
+
+.publication-card:first-of-type {
+  padding-top: 0;
+}
+
+.publication-card + .publication-card {
+  border-top: 1px solid var(--soft-line);
+}
+
+.publication-body h3,
+.project-body h3 {
+  margin-bottom: 0.5rem;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+.project-card {
+  gap: 40px;
+  padding-top: 32px;
+}
+
+/* Bold call-to-action links */
+
+.publication-links,
+.project-links {
+  margin-top: 0.9rem;
+}
+
+.publication-links a,
+.project-links a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.publication-links a::after,
+.project-links a::after {
+  content: " \2192";
+  font-weight: 400;
+}
+
+.publication-links span,
+.project-links span {
+  display: none;
+}
+
+.publication-links,
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .section,
+  .hero {
+    padding: 40px 0;
+  }
+
+  .name,
+  .subpage-header h1 {
+    font-size: 38px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .publication-card,
+  .project-card {
+    gap: 18px;
+  }
+}
+
+/* Subpages: a single reading column so dates, rules and text share one edge */
+
+.page:has(.info-box-grid:not(.info-box-grid--split)) {
+  max-width: calc(56rem + 64px);
+}
+
+.info-box p,
+.info-box .research-card p,
+.info-box .talk-main p {
+  max-width: none;
+}
+
+/* Avoid a doubled rule where a list starts right under a heading or section rule */
+
+.section > .project-card:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.talk-item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.talk-item {
+  padding: 18px 0;
+}
+
+.publication-list a + a {
+  margin-left: 0.7em;
+}
+
+/* Keep news icons on the first line when an item wraps */
+
+.timeline-item {
+  align-items: start;
+}
+
+.news-date,
+.news-icon {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  height: 1.65em;
+}
+
+.news-date {
+  font-size: 12.5px;
+  height: calc(17px * 1.65);
+}
+
+.publication-body .publication-meta,
+.project-body .project-meta {
+  font-size: 12.5px;
+  letter-spacing: 0.01em;
+}
+
+/* Cap the bio's line length while keeping its rule aligned with the text */
+
+@media (min-width: 769px) {
+  .hero {
+    grid-template-columns: 300px minmax(0, 50rem);
+  }
+}
