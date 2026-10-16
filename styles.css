@@ -1,11 +1,14 @@
 /* Overrides; this file loads after stylesheet.css.
    Flat editorial layout: no card frames, large serif headings, generous
-   spacing and monospace dates; links and publication cards keep the base
+   spacing and ink-coloured dates; links and publication cards keep the base
    styles. */
 
 :root {
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --measure: 44rem;
+  /* No grey text anywhere: secondary levels use the ink colour too */
+  --muted: #141413;
+  --tertiary: #141413;
   --ivory: #FAF9F5;
   --oat: #F0EEE6;
   --warm-line: #E8E6DC;
@@ -185,18 +188,19 @@ body {
   color: var(--coral);
 }
 
-/* Monospace metadata */
+/* Dates: body face, ink colour, tabular figures */
 
 .item-time,
 .news-date,
 .talk-time,
 .story-date,
 .brief-date {
-  color: var(--tertiary);
-  font-family: var(--mono);
-  font-size: 12.5px;
-  font-weight: 400;
-  letter-spacing: 0;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: 0.01em;
 }
 
 /* News: plain list, no rail */
@@ -217,6 +221,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* keep the two affiliations on separate lines instead of running together */
+  .profile-org br {
+    display: inline;
+  }
+
   .nav-links a::after {
     left: 0;
     margin-left: 0;
@@ -285,7 +294,7 @@ body {
 }
 
 .news-date {
-  font-size: 12.5px;
+  font-size: 14px;
   height: calc(17px * 1.65);
 }
 
@@ -334,9 +343,7 @@ body {
 }
 
 .hero-detail .item-time {
-  font-family: inherit;
   font-size: 14px;
-  font-variant-numeric: tabular-nums;
 }
 
 .hero-detail .compact-list {
@@ -394,4 +401,8 @@ body {
 .project-media,
 .profile-side .image-shell {
   background: var(--ivory);
+}
+
+.brief-row::before {
+  background: var(--coral);
 }
