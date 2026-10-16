@@ -423,3 +423,191 @@ body {
   font-size: 16px;
   line-height: calc(17px * 1.5);
 }
+
+/* Phone layout */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .page {
+    padding: 0 20px 48px;
+  }
+
+  .nav-container {
+    padding: 10px 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 32px;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+
+  .name {
+    margin-top: 1.1rem;
+    font-size: 34px;
+  }
+
+  .profile-copy p,
+  .research-card p,
+  .talk-main p,
+  .story-main p,
+  .publication-body p,
+  .project-body p,
+  .timeline-item {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero-detail {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .hero-detail .item-head {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section-title {
+    margin-bottom: 1.2rem;
+    font-size: 28px;
+  }
+
+  .section-title::before,
+  .subpage-header h1::before {
+    margin-bottom: 14px;
+  }
+
+  .subpage-header {
+    padding: 36px 0 4px;
+  }
+
+  .subpage-header h1 {
+    font-size: 36px;
+  }
+
+  .info-box h2,
+  .hero-detail h2 {
+    font-size: 22px;
+  }
+
+  .info-box-grid {
+    gap: 40px;
+  }
+
+  /* News: date sits above the text so the sentence gets the full width */
+  .timeline-item {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "date date" "icon text";
+    gap: 0 0.6rem;
+  }
+
+  .news-date {
+    grid-area: date;
+    height: auto;
+    font-size: 13px;
+  }
+
+  .news-icon {
+    grid-area: icon;
+  }
+
+  .timeline-item > span:last-child {
+    grid-area: text;
+  }
+
+  .news-list {
+    gap: 1rem;
+  }
+
+  .publication-card {
+    gap: 14px;
+    margin-top: 8px;
+    padding: 20px 0;
+  }
+
+  .publication-body h3 {
+    font-size: 17px;
+  }
+
+  .talk-item {
+    gap: 2px;
+  }
+
+  .nav-links {
+    top: 100%;
+    gap: 0;
+    padding: 6px 0 10px;
+    background: var(--ivory);
+    border-bottom: 1px solid var(--warm-line);
+    border-radius: 0;
+    box-shadow: 0 12px 24px -16px rgba(31, 30, 29, 0.18);
+  }
+
+  .nav-links li {
+    padding: 5px 20px;
+  }
+
+  .nav-links a {
+    padding: 3px 0;
+    font-size: 16px;
+  }
+}
+
+/* Phone: compact profile header, photo on the left, name and affiliation beside it */
+
+@media (max-width: 768px) {
+  .profile-side {
+    display: grid;
+    grid-template-columns: 116px 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    column-gap: 18px;
+    align-items: start;
+    text-align: left;
+  }
+
+  .profile-photo {
+    grid-row: 1 / span 4;
+    max-width: none;
+    margin: 0;
+  }
+
+  .profile-side .image-shell {
+    border-radius: 16px;
+  }
+
+  .profile-side .name {
+    margin: -4px 0 0.15rem;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .profile-role {
+    margin: 0 0 0.15rem;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .profile-org {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .contact-links {
+    justify-content: flex-start;
+    gap: 0 0.35rem;
+    margin-top: 0.4rem;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+}
