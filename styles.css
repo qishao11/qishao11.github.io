@@ -35,15 +35,50 @@ body {
   letter-spacing: -0.01em;
 }
 
+.nav-links {
+  gap: 34px;
+}
+
 .nav-links a {
-  color: var(--muted);
+  position: relative;
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--tertiary);
   font-size: 15px;
   font-weight: 400;
+  letter-spacing: 0.015em;
+  transition: color 0.2s ease;
+}
+
+/* Coral underline: grows from the centre on hover, stays on the active page */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  background: var(--coral);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(0.6);
 }
 
 .nav-links a.active {
   color: var(--text);
   font-weight: 500;
+}
+
+.nav-links a.active::after {
+  transform: scaleX(1);
 }
 
 /* Containers lose their frames; sections are separated by space and a rule */
@@ -178,6 +213,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-links a::after {
+    right: auto;
+    width: 20px;
+  }
+
   .section,
   .hero {
     padding: 40px 0;
