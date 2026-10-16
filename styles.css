@@ -6,9 +6,6 @@
 :root {
   --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
   --measure: 44rem;
-  /* No grey text anywhere: secondary levels use the ink colour too */
-  --muted: #141413;
-  --tertiary: #141413;
   --ivory: #FAF9F5;
   --oat: #F0EEE6;
   --warm-line: #E8E6DC;
@@ -401,8 +398,4 @@ body {
 .project-media,
 .profile-side .image-shell {
   background: var(--ivory);
-}
-
-.brief-row::before {
-  background: var(--coral);
 }
