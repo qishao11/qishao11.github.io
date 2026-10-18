@@ -693,3 +693,165 @@ body {
     aspect-ratio: 16 / 9 !important;
   }
 }
+
+/* Narrow reading width (about 960px, like a classic academic homepage) */
+
+.page,
+.nav-container {
+  max-width: 960px;
+}
+
+.page:has(.info-box-grid:not(.info-box-grid--split)) {
+  max-width: 960px;
+}
+
+@media (min-width: 769px) {
+  .hero {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .hero-detail {
+    gap: 24px 40px;
+  }
+
+  .publication-card {
+    grid-template-columns: minmax(220px, 36%) 1fr;
+    gap: 24px;
+  }
+
+  .project-card {
+    grid-template-columns: minmax(240px, 40%) 1fr;
+    gap: 28px;
+  }
+}
+
+/* Tighter rhythm */
+
+body {
+  line-height: 1.58;
+}
+
+.profile-copy p,
+.research-card p,
+.talk-main p,
+.story-main p {
+  line-height: 1.58;
+}
+
+.profile-copy p {
+  margin-bottom: 0.55rem;
+}
+
+.contact-links {
+  gap: 0.2rem 0.45rem;
+}
+
+@media (min-width: 769px) {
+  .section,
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero {
+    padding-top: 36px;
+  }
+
+  .subpage-header {
+    padding: 40px 0 8px;
+  }
+
+  .subpage-header h1 {
+    font-size: 44px;
+  }
+
+  .section-title {
+    margin-bottom: 1.1rem;
+    font-size: 30px;
+  }
+
+  .section-title::before,
+  .subpage-header h1::before {
+    margin-bottom: 12px;
+  }
+
+  .info-box-grid {
+    gap: 34px;
+  }
+
+  .info-box h2,
+  .hero-detail h2 {
+    margin-bottom: 0.7rem;
+    font-size: 23px;
+  }
+
+  .hero-detail {
+    margin-top: 1.3rem;
+    padding-top: 1.3rem;
+  }
+
+  .hero-detail .item-list {
+    gap: 8px;
+  }
+
+  .hero-detail .info-item {
+    padding-bottom: 8px;
+  }
+
+  .hero-detail .compact-list li {
+    margin-bottom: 0.45rem;
+  }
+
+  .item-list {
+    gap: 8px;
+  }
+
+  .info-item {
+    padding-bottom: 8px;
+  }
+
+  .research-grid {
+    gap: 10px;
+  }
+
+  .research-card {
+    padding-top: 10px;
+  }
+
+  .talk-item {
+    padding: 12px 0;
+  }
+
+  .news-list {
+    gap: 0.45rem;
+  }
+
+  .publication-card {
+    margin-top: 0;
+    padding: 16px 0;
+  }
+
+  .publication-list li {
+    margin-bottom: 0.8rem;
+  }
+
+  .name {
+    margin-top: 1rem;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 769px) {
+  .hero-detail {
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
+    gap: 20px 32px;
+  }
+
+  .hero-detail .item-head h3 {
+    font-size: 15px;
+  }
+
+  .hero-detail .item-time {
+    font-size: 13.5px;
+  }
+}
