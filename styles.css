@@ -855,3 +855,45 @@ body {
     font-size: 13.5px;
   }
 }
+
+/* Tighter line spacing */
+
+body,
+.profile-copy p,
+.research-card p,
+.talk-main p,
+.story-main p,
+.publication-body p,
+.project-body p,
+.info-item p,
+.timeline-item,
+.compact-list li,
+.service-list li,
+.publication-list li {
+  line-height: 1.46;
+}
+
+.hero-detail .info-item p {
+  line-height: 1.4;
+}
+
+.news-date,
+.news-icon {
+  height: 1.46em;
+}
+
+.news-date {
+  height: calc(17px * 1.46);
+}
+
+.talk-time {
+  line-height: calc(17px * 1.4);
+}
+
+@media (max-width: 768px) {
+  .contact-links {
+    gap: 0 0.3rem;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
