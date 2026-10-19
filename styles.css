@@ -1011,3 +1011,31 @@ body,
     font-size: 15px;
   }
 }
+
+/* Project cards: larger title, smaller body */
+.project-body h3 {
+  margin-bottom: 0.35rem;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.project-body p {
+  margin-bottom: 0.35rem;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.project-body .project-meta {
+  margin-bottom: 0.3rem;
+  font-size: 13.5px;
+}
+
+@media (max-width: 768px) {
+  .project-body h3 {
+    font-size: 18.5px;
+  }
+
+  .project-body p {
+    font-size: 15px;
+  }
+}
