@@ -931,3 +931,18 @@ body,
     font-size: 15px;
   }
 }
+
+/* Slightly wider reading width */
+
+.page,
+.nav-container,
+.page:has(.info-box-grid:not(.info-box-grid--split)) {
+  max-width: 1080px;
+}
+
+@media (min-width: 769px) {
+  .hero {
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 56px;
+  }
+}
