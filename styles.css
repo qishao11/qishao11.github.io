@@ -1039,3 +1039,10 @@ body,
     font-size: 15px;
   }
 }
+
+/* Wider reading width */
+.page,
+.nav-container,
+.page:has(.info-box-grid:not(.info-box-grid--split)) {
+  max-width: 1160px;
+}
