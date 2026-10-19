@@ -1046,3 +1046,16 @@ body,
 .page:has(.info-box-grid:not(.info-box-grid--split)) {
   max-width: 1160px;
 }
+
+/* More breathing room between the navigation bar and the profile */
+@media (min-width: 769px) {
+  .hero {
+    padding-top: 60px;
+  }
+}
+
+/* More space around the slashes between links */
+.publication-links span,
+.project-links span {
+  margin: 0 0.3em;
+}
