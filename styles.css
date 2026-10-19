@@ -986,3 +986,11 @@ body,
     padding: 14px 0;
   }
 }
+
+/* Give Interests more room so each item fits on one line */
+@media (min-width: 769px) {
+  .hero-detail {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px 36px;
+  }
+}
