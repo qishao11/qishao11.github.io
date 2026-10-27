@@ -35,7 +35,7 @@ a { color: var(--brand); text-decoration: none; }
 a:hover { color: var(--brand-hover); text-decoration: underline; }
 
 .wrap {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 48px 24px 64px;
 }
@@ -208,9 +208,19 @@ footer {
 .zoom img { max-width: 100%; max-height: 100%; border-radius: 4px; background: #FFFFFF; }
 
 @media (max-width: 680px) {
-  .wrap { padding: 28px 16px 48px; }
-  .header { flex-direction: column-reverse; gap: 18px; }
-  .photo { width: 130px; height: 160px; flex-basis: auto; }
-  .pub, .project { grid-template-columns: 1fr; gap: 10px; }  .entry { flex-direction: column; gap: 0; }
-  .news li { grid-template-columns: 74px 1fr; }
+  body { font-size: 16px; line-height: 1.5; }
+  .wrap { padding: 24px 18px 40px; }
+  .header { flex-direction: column-reverse; gap: 16px; }
+  .photo { width: 112px; height: 138px; flex-basis: auto; }
+  .header h1 { font-size: 27px; }
+  .header .role { font-size: 17px; margin-bottom: 10px; }
+  .header p { font-size: 15px; }
+  h2 { margin: 30px 0 12px; font-size: 20px; }
+  .news { max-height: 280px; }
+  .news li { grid-template-columns: 70px 1fr; gap: 6px; font-size: 15px; padding: 2px 0; }
+  .pub, .project { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; font-size: 15px; line-height: 1.4; }
+  .pub .title { font-size: 16px; line-height: 1.3; }
+  .entry { flex-direction: column; gap: 0; margin-bottom: 10px; }
+  .entry .when { font-size: 15px; }
+  .plain li { margin: 4px 0; }
 }
