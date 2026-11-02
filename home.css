@@ -32,7 +32,7 @@ body {
   color: var(--text);
   font-family: var(--sans);
   font-size: 18px;
-  line-height: 1.35;
+  line-height: 1.45;
 }
 
 a { color: var(--brand); text-decoration: none; }
@@ -134,7 +134,7 @@ section p { margin: 0 0 10px; }
   align-items: center;
   margin-bottom: 20px;
   font-size: 17px;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 .pub img {
@@ -149,7 +149,7 @@ section p { margin: 0 0 10px; }
   cursor: zoom-in;
 }
 
-.pub .title { font-family: var(--bold); font-size: 18px; font-weight: 600; line-height: 1.15; margin-bottom: 3px; }
+.pub .title { font-family: var(--bold); font-size: 18px; font-weight: 600; line-height: 1.2; margin-bottom: 3px; }
 .pub .venue { font-style: italic; color: #C4512B; }
 .pub p { margin: 0; }
 .pub .tag { margin-top: 2px; }
@@ -181,7 +181,7 @@ section p { margin: 0 0 10px; }
   gap: 26px;
   align-items: center;
   font-size: 17px;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 .project p { margin: 0 0 3px; }
@@ -212,7 +212,7 @@ footer {
 .zoom img { max-width: 100%; max-height: 100%; border-radius: 4px; background: #FFFFFF; }
 
 @media (max-width: 680px) {
-  body { font-size: 17px; line-height: 1.4; }
+  body { font-size: 17px; line-height: 1.5; }
   .wrap { padding: 24px 18px 40px; }
   .header { flex-direction: column-reverse; gap: 16px; }
   .photo { width: 112px; height: 138px; flex-basis: auto; }
@@ -222,8 +222,8 @@ footer {
   h2 { margin: 30px 0 12px; font-size: 21px; }
   .news { max-height: 280px; }
   .news li { grid-template-columns: 70px 1fr; gap: 6px; font-size: 16px; padding: 2px 0; }
-  .pub, .project { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; font-size: 16px; line-height: 1.3; }
-  .pub .title { font-size: 17px; line-height: 1.2; }
+  .pub, .project { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; font-size: 16px; line-height: 1.4; }
+  .pub .title { font-size: 17px; line-height: 1.3; }
   .entry { flex-direction: column; gap: 0; margin-bottom: 10px; }
   .entry .when { font-size: 16px; }
   .plain li { margin: 4px 0; }
