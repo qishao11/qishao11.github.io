@@ -9,8 +9,8 @@
 @font-face { font-family: "Lining Digits"; src: local("Times New Roman Italic"), local("TimesNewRomanPS-ItalicMT"); unicode-range: U+0030-0039; font-weight: 400; font-style: italic; }
 
 :root {
-  --brand: #2F5E9E;
-  --brand-hover: #1F4478;
+  --brand: #2557C7;
+  --brand-hover: #1B449E;
   --text: #141413;
   --line: #DCDAD2;
   --soft: #FAF9F5;
@@ -150,7 +150,7 @@ section p { margin: 0 0 10px; }
 }
 
 .pub .title { font-family: var(--bold); font-size: 18px; font-weight: 600; line-height: 1.2; margin-bottom: 3px; }
-.pub .venue { font-style: italic; color: #C4512B; }
+.pub .venue { font-style: italic; color: var(--brand); }
 .pub p { margin: 0; }
 .pub .tag { margin-top: 2px; }
 
