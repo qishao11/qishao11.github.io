@@ -150,7 +150,7 @@ section p { margin: 0 0 10px; }
 }
 
 .pub .title { font-family: var(--bold); font-size: 18px; font-weight: 600; line-height: 1.2; margin-bottom: 3px; }
-.pub .venue { font-style: italic; color: var(--brand); }
+.pub .venue { font-style: italic; color: #EA580C; }
 .pub p { margin: 0; }
 .pub .tag { margin-top: 2px; }
 
