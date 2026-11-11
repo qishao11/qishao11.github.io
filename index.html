@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@600&display=swap">
-  <link rel="stylesheet" href="home.css?v=20261102d">
+  <link rel="stylesheet" href="home.css?v=20261111a">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     <section id="bio">
       <h2>Biography</h2>
       <p>
-        I am a Ph.D. student in Control Science and Engineering at
+        I am a <mark class="brush">Ph.D. student</mark> in Control Science and Engineering at
         <a href="https://english.hrbeu.edu.cn/">Harbin Engineering University</a>, advised by
         <a href="https://faculty.hrbeu.edu.cn/liliang/zh_CN/hjxx/45060/content/4376.htm">Prof. Liang Li</a>
         and collaborating with <a href="https://faculty.hrbeu.edu.cn/lianghong/zh_CN/index.htm">Prof. Hong Liang</a>.
@@ -51,7 +51,7 @@
         I received my B.Eng. from the <a href="https://cisse.hrbeu.edu.cn/">College of Intelligent Systems Science and Engineering</a>
         at Harbin Engineering University.
       </p>
-      <p>My research focuses on Multi-Agent Spatial Intelligence at the intersection of computer vision, robotics, and embodied AI, as follows:</p>
+      <p>My research focuses on <mark class="brush">Multi-Agent Spatial Intelligence</mark> at the intersection of computer vision, robotics, and embodied AI, as follows:</p>
       <ul class="plain research">
         <li><strong>Multi-Agent Spatial Perception:</strong> Robust and Scalable Multi-Agent localization, 3D reconstruction, and dynamic scene understanding.</li>
         <li><strong>Collaborative Vision-Language Navigation:</strong> Language-guided Multi-Robot navigation, spatial reasoning, and joint decision-making.</li>
@@ -201,6 +201,23 @@
     function closeZoom() { zoom.classList.remove('active'); zoomImg.removeAttribute('src'); }
     zoom.addEventListener('click', closeZoom);
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeZoom(); });
+    /* Hand-drawn blue brush strokes under key phrases, painted one after another on view */
+    (function () {
+      var marks = [].slice.call(document.querySelectorAll('mark.brush'));
+      if (!marks.length) return;
+      var c = '#B5C6EC';
+      var svg = "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 20' preserveAspectRatio='none'>" +
+        "<path fill='" + c + "' d='M3 8.5C22 5 48 6.5 76 5.2S141 3.6 168 4.6 194 6 197.5 7.8L196 15.2C178 16.6 151 15.1 121 16.3S58 17.4 33 16.1 8 15.8 2.5 13.6Z'/>" +
+        "<path fill='" + c + "' opacity='.55' d='M6 11.2C40 9.6 95 10.4 140 9.8S188 10.2 199 11.4L198 13C170 13.6 120 12.8 70 13.4S20 13.4 5 12.9Z'/></svg>";
+      var img = 'url("data:image/svg+xml,' + encodeURIComponent(svg) + '")';
+      marks.forEach(function (m, i) { m.style.backgroundImage = img; m.style.transitionDelay = (0.35 + i * 0.6) + 's'; });
+      function paint() { marks.forEach(function (m) { m.classList.add('drawn'); }); }
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return paint();
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('drawn'); io.unobserve(e.target); } });
+      }, { threshold: 0.6 });
+      marks.forEach(function (m) { io.observe(m); });
+    })();
   </script>
 </body>
 
