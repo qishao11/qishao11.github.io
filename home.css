@@ -112,8 +112,6 @@ section p { margin: 0 0 10px; }
 
 /* News */
 .news {
-  max-height: 220px;
-  overflow-y: auto;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -127,6 +125,17 @@ section p { margin: 0 0 10px; }
 }
 
 .news .date { font-variant-numeric: tabular-nums; font-weight: 500; }
+.news.collapsed li:nth-child(n+5) { display: none; }
+.news-toggle {
+  margin: 4px 0 0 90px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--brand);
+  font: inherit;
+  cursor: pointer;
+}
+.news-toggle:hover { color: var(--brand-hover); text-decoration: underline; }
 
 /* Publications */
 .pub {
@@ -224,7 +233,7 @@ footer {
   .header .role { font-size: 18px; margin-bottom: 10px; }
   .header p { font-size: 16px; }
   h2 { margin: 30px 0 12px; font-size: 21px; }
-  .news { max-height: 280px; }
+  .news-toggle { margin-left: 76px; }
   .news li { grid-template-columns: 70px 1fr; gap: 6px; font-size: 16px; padding: 2px 0; }
   .pub, .project { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; font-size: 16px; line-height: 1.4; }
   .pub .title { font-size: 17px; line-height: 1.3; }
