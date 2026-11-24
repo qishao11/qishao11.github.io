@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gelasio:wght@600&display=swap">
-  <link rel="stylesheet" href="home.css?v=20261124f">
+  <link rel="stylesheet" href="home.css?v=20261124g">
 </head>
 
 <body>
@@ -71,7 +71,6 @@
         <li><span class="date">[08/2025]</span><span>Started joint Ph.D. training in the School of Computer Science and Informatics, University of Liverpool.</span></li>
         <li><span class="date">[08/2023]</span><span>One paper accepted by <em>IEEE International Conference on Mechatronics and Automation</em> (ICMA).</span></li>
       </ul>
-      <button type="button" class="news-toggle" id="news-toggle" hidden></button>
     </section>
 
     <!-- EDIT CONTENT: Publications -->
@@ -225,24 +224,6 @@
   </main>
 
   <div class="zoom" id="zoom" aria-hidden="true"><img alt=""></div>
-
-  <script>
-    (function () {
-      const SHOW = 4;
-      const list = document.getElementById('news-list');
-      const btn = document.getElementById('news-toggle');
-      const total = list.children.length;
-      if (total <= SHOW) return;
-      function render(open) {
-        list.classList.toggle('collapsed', !open);
-        btn.textContent = open ? 'Show less' : 'Show all (' + total + ')';
-        btn.setAttribute('aria-expanded', open);
-      }
-      btn.hidden = false;
-      btn.addEventListener('click', function () { render(list.classList.contains('collapsed')); });
-      render(false);
-    })();
-  </script>
 
   <script>
     const zoom = document.getElementById('zoom');

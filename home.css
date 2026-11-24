@@ -119,27 +119,18 @@ section p { margin: 0 0 0.8em; }
   margin: 0;
   padding: 0;
   list-style: none;
+  max-height: 280px;
+  overflow-y: auto;
 }
 
 .news li {
   display: grid;
   grid-template-columns: 74px 1fr;
   gap: 8px;
-  padding: 1px 0;
+  margin-top: 0.9em;
 }
 
 .news .date { font-variant-numeric: tabular-nums; font-weight: 500; }
-.news.collapsed li:nth-child(n+5) { display: none; }
-.news-toggle {
-  margin: 4px 0 0 82px;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--brand);
-  font: inherit;
-  cursor: pointer;
-}
-.news-toggle:hover { color: var(--brand-hover); text-decoration: underline; }
 
 /* Publications */
 .pub {
@@ -147,7 +138,7 @@ section p { margin: 0 0 0.8em; }
   grid-template-columns: 300px 1fr;
   gap: 26px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 0.9em;
   font-size: 16px;
   line-height: 1.3;
 }
@@ -176,16 +167,15 @@ section p { margin: 0 0 0.8em; }
 
 /* Plain lists */
 .plain { margin: 0; padding-left: 20px; }
-.plain li { margin: 2px 0; }
-#bio p + .research { margin-top: -4px; }
-.research li { margin: 4px 0; }
+.plain li { margin: 0.9em 0 0; }
+#bio p + .research { margin-top: -0.5em; }
 
 /* Dated entries: education, experience */
 .entry {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 6px;
+  margin-top: 0.9em;
 }
 
 .entry .when { flex: none; font-variant-numeric: tabular-nums; }
@@ -238,13 +228,13 @@ footer {
   .header .role { font-size: 17px; margin-bottom: 10px; }
   .header p { font-size: 15px; }
   h2 { font-size: 19px; }
-  .news-toggle { margin-left: 72px; }
-  .news li { grid-template-columns: 66px 1fr; gap: 6px; font-size: 15px; padding: 2px 0; }
-  .pub, .project { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; font-size: 15px; line-height: 1.4; }
+  .news { max-height: none; }
+  .news li { grid-template-columns: 66px 1fr; gap: 6px; font-size: 15px; }
+  .pub, .project { grid-template-columns: 1fr; gap: 10px; font-size: 15px; line-height: 1.4; }
+  .pub + .pub { margin-top: 28px; }
   .pub .title { font-size: 16px; line-height: 1.3; }
-  .entry { flex-direction: column; gap: 0; margin-bottom: 10px; }
+  .entry { flex-direction: column; gap: 0; }
   .entry .when { font-size: 15px; }
-  .plain li { margin: 4px 0; }
 }
 
 /* Hand-drawn blue brush stroke under key phrases (painted on load by index.html) */
