@@ -28,11 +28,11 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #EEEEEE;
+  background: #F0EEE6;
   color: var(--text);
   font-family: var(--sans);
   font-size: 16px;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 a { color: var(--brand); text-decoration: none; }
@@ -100,8 +100,9 @@ a:not([href]), a:not([href]):hover { color: var(--brand); text-decoration: none;
 
 /* Section headings */
 h2 {
-  margin: 30px 0 12px;
-  padding-bottom: 6px;
+  margin: 14px 0 10px;
+  padding: 16px 0 4px;
+  line-height: 1;
   border-bottom: 1px solid var(--line);
   font-family: var(--bold);
   font-size: 20px;
@@ -111,7 +112,7 @@ h2 {
 
 h2 .aside { font-family: var(--serif); font-size: 16px; font-weight: 400; }
 
-section p { margin: 0 0 10px; }
+section p { margin: 0 0 0.8em; }
 
 /* News */
 .news {
@@ -236,7 +237,7 @@ footer {
   .header h1 { font-size: 26px; }
   .header .role { font-size: 17px; margin-bottom: 10px; }
   .header p { font-size: 15px; }
-  h2 { margin: 30px 0 12px; font-size: 19px; }
+  h2 { font-size: 19px; }
   .news-toggle { margin-left: 72px; }
   .news li { grid-template-columns: 66px 1fr; gap: 6px; font-size: 15px; padding: 2px 0; }
   .pub, .project { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; font-size: 15px; line-height: 1.4; }
