@@ -45,7 +45,7 @@ a:not([href]), a:not([href]):hover { color: var(--brand); text-decoration: none;
 .wrap {
   max-width: 1060px;
   margin: 30px auto;
-  padding: 40px 50px 30px;
+  padding: 40px 66px 30px;
   background: #FFFFFF;
 }
 
