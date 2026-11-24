@@ -28,7 +28,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #FFFFFF;
+  background: #EEEEEE;
   color: var(--text);
   font-family: var(--sans);
   font-size: 16px;
@@ -43,9 +43,10 @@ a:not([href]), a:not([href]):hover { color: var(--brand); text-decoration: none;
 #bio a:hover { color: var(--brand); text-decoration-color: var(--brand); }
 
 .wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 48px 24px 64px;
+  max-width: 1060px;
+  margin: 30px auto;
+  padding: 40px 50px 30px;
+  background: #FFFFFF;
 }
 
 /* Header */
@@ -228,7 +229,8 @@ footer {
 
 @media (max-width: 680px) {
   body { font-size: 16px; line-height: 1.5; }
-  .wrap { padding: 24px 18px 40px; }
+  body { background: #FFFFFF; }
+  .wrap { margin: 0; padding: 24px 18px 40px; }
   .header { flex-direction: column-reverse; gap: 16px; }
   .photo { width: 112px; height: 138px; flex-basis: auto; }
   .header h1 { font-size: 26px; }
